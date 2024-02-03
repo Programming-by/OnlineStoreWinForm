@@ -48,8 +48,33 @@ namespace OnlineStoreWinform
             //} else
             //{
             //MessageBox.Show("dd");
-
             //}
+
+            // update
+
+            clsCustomer customer = clsCustomer.Find(1);
+
+            if (customer != null)
+            {
+                customer.Name = "AnasNaa";
+                customer.Email = "anasnaamneh@gmail.com";
+                customer.Phone = "5452";
+                customer.Address = "Madrid";
+                customer.Username = "AnasNaamneh";
+                customer.Password = "12345";
+                if (customer.Save())
+                {
+                    MessageBox.Show("Updated");
+
+                }
+                else
+                {
+                    MessageBox.Show("failed");
+                }
+
+            }
+
+
 
         }
     }
