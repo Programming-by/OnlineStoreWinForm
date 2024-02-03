@@ -5,9 +5,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace OnlineStoreWinform
 {
@@ -20,11 +23,34 @@ namespace OnlineStoreWinform
 
         private void button1_Click(object sender, EventArgs e)
         {
-          //  dataGridView1.DataSource = clsCustomer.GetAllCustomer();
+            //get all
+            // dataGridView1.DataSource = clsCustomer.GetAllCustomer();
 
-            clsCustomer customer = clsCustomer.Find(1);
+            //find
+            //clsCustomer customer = clsCustomer.Find(1);
 
-            MessageBox.Show(customer.Email);
+            //MessageBox.Show(customer.Email);
+
+            //add new
+            //clsCustomer customer = new clsCustomer();
+
+            //customer.Name = "Mahmoud";
+            //customer.Email = "Mahmoud@gmail.com";
+            //customer.Phone = "55714";
+            //customer.Address = "Amman";
+            //customer.Username = "MahmoudN";
+            //customer.Password = "1234";
+
+            //if (customer.Save())
+            //{
+            //    MessageBox.Show(customer.CustomerID.ToString());
+
+            //} else
+            //{
+            //MessageBox.Show("dd");
+
+            //}
+
         }
     }
 }
