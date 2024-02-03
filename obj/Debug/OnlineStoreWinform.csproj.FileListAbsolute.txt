@@ -1,0 +1,16 @@
+C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.csproj.AssemblyReference.cache
+C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.Properties.Resources.resources
+C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\OnlineStoreWinform\bin\Debug\OnlineStoreWinform.exe.config
+C:\Users\User\Source\Repos\OnlineStoreWinform\bin\Debug\OnlineStoreWinform.exe
+C:\Users\User\Source\Repos\OnlineStoreWinform\bin\Debug\OnlineStoreWinform.pdb
+C:\Users\User\Source\Repos\OnlineStoreWinform\bin\Debug\OnlineStoreBusinessLayer.dll
+C:\Users\User\Source\Repos\OnlineStoreWinform\bin\Debug\OnlineStoreDataAccess.dll
+C:\Users\User\Source\Repos\OnlineStoreWinform\bin\Debug\OnlineStoreBusinessLayer.pdb
+C:\Users\User\Source\Repos\OnlineStoreWinform\bin\Debug\OnlineStoreDataAccess.pdb
+C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.csproj.CopyComplete
+C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.exe
+C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.pdb
+C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.frmTest.resources
