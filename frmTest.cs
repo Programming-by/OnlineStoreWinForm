@@ -52,30 +52,37 @@ namespace OnlineStoreWinform
 
             // update
 
-            clsCustomer customer = clsCustomer.Find(1);
+            //clsCustomer customer = clsCustomer.Find(1);
 
-            if (customer != null)
-            {
-                customer.Name = "AnasNaa";
-                customer.Email = "anasnaamneh@gmail.com";
-                customer.Phone = "5452";
-                customer.Address = "Madrid";
-                customer.Username = "AnasNaamneh";
-                customer.Password = "12345";
-                if (customer.Save())
-                {
-                    MessageBox.Show("Updated");
+            //if (customer != null)
+            //{
+            //    customer.Name = "AnasNaa";
+            //    customer.Email = "anasnaamneh@gmail.com";
+            //    customer.Phone = "5452";
+            //    customer.Address = "Madrid";
+            //    customer.Username = "AnasNaamneh";
+            //    customer.Password = "12345";
+            //    if (customer.Save())
+            //    {
+            //        MessageBox.Show("Updated");
 
-                }
-                else
-                {
-                    MessageBox.Show("failed");
-                }
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("failed");
+            //    }
 
-            }
+            bool IsDeleted =  clsCustomer.DeleteCustomer(4);
+
+            if (IsDeleted)
+                MessageBox.Show("Deleted");
+            else
+                MessageBox.Show("Not Deleted");
+
+        
 
 
 
-        }
+    }
     }
 }
