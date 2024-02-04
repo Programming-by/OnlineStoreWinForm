@@ -24,26 +24,21 @@ namespace OnlineStoreWinform
         private void button1_Click(object sender, EventArgs e)
         {
             //get all
-            //dataGridView1.DataSource = clsShipping.GetAllShipping();
+            //dataGridView1.DataSource = clsProductCategory.GetAllProductCategory();
 
             //find
-            //clsShipping shipping = clsShipping.Find(1);
+            //clsProductCategory productcategory = clsProductCategory.Find(1);
 
-            //MessageBox.Show(shipping.CarrierName.ToString());
+            //MessageBox.Show(productcategory.CategoryName.ToString());
 
             //add new
-            //clsShipping shipping = new clsShipping();
+            //clsProductCategory productcategory = new clsProductCategory();
 
-            //shipping.OrderID = 1;
-            //shipping.CarrierName = "Aramex";
-            //shipping.TrackingNumber = "248";
-            //shipping.ShippingStatus = (clsShipping.enShippingStatus)3;
-            //shipping.EstimatedDeliveryDate = DateTime.Parse("2024-03-01");
-            //shipping.ActualDeliveryDate = DateTime.Parse("2024-05-02");
+            //productcategory.CategoryName = "Books";
 
-            //if (shipping.Save())
+            //if (productcategory.Save())
             //{
-            //    MessageBox.Show(shipping.ShippingID.ToString());
+            //    MessageBox.Show(productcategory.CategoryID.ToString());
 
             //}
             //else
@@ -53,17 +48,12 @@ namespace OnlineStoreWinform
 
             // update
 
-            //clsShipping shipping = clsShipping.Find(1);
+            clsProductCategory productcategory = clsProductCategory.Find(1);
 
-            //if (shipping != null)
+            //if (productcategory != null)
             //{
-            //    shipping.OrderID = 2;
-            //    shipping.CarrierName = "Aramex";
-            //    shipping.TrackingNumber = "15";
-            //    shipping.ShippingStatus = (clsShipping.enShippingStatus) 4;
-            //    shipping.EstimatedDeliveryDate = DateTime.Parse("2024-08-20");
-            //    shipping.ActualDeliveryDate = null;
-            //    if (shipping.Save())
+            //    productcategory.CategoryName = "Electronics";
+            //    if (productcategory.Save())
             //    {
             //        MessageBox.Show("Updated");
             //    }
@@ -71,17 +61,17 @@ namespace OnlineStoreWinform
             //    {
             //        MessageBox.Show("failed");
             //    }
+            //}
 
             // delete
 
-            bool IsDeleted = clsShipping.DeleteShipping(5);
+            bool IsDeleted = clsProductCategory.DeleteProductCategory(3);
 
             if (IsDeleted)
                 MessageBox.Show("Deleted");
             else
                 MessageBox.Show("Not Deleted");
         }
-        }
-
+    }
 
 }
