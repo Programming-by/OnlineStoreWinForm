@@ -24,27 +24,23 @@ namespace OnlineStoreWinform
         private void button1_Click(object sender, EventArgs e)
         {
             //get all
-            // dataGridView1.DataSource = clsProductCatalog.GetAllProductCatalogs();
+            // dataGridView1.DataSource = clsProductImages.GetAllProductImages();
 
             //find
-            //clsProductCatalog productcatalog = clsProductCatalog.Find(1);
+            //clsProductImages productimages = clsProductImages.Find(1);
 
-            //MessageBox.Show(productcatalog.ProductName.ToString());
+            //MessageBox.Show(productimages.ProductID.ToString());
 
             //add new
-            //clsProductCatalog productcatalog = new clsProductCatalog();
+            //clsProductImages productimages = new clsProductImages();
 
-            //productcatalog.ProductName = "Pride and Prejudice ";
-            //productcatalog.Description = "book";
-            //productcatalog.Price = 15;
-            //productcatalog.QuantityInStock = 1;
-            //productcatalog.ImageURL = "c:\\";
-            //productcatalog.CategoryID = 2;
+            //productimages.ImageURL = "f:\\ ";
+            //productimages.ImageOrder = 1;
+            //productimages.ProductID = 2;
 
-            //if (productcatalog.Save())
+            //if (productimages.Save())
             //{
-            //    MessageBox.Show(productcatalog.ProductID.ToString());
-
+            //    MessageBox.Show(productimages.ID.ToString());
             //}
             //else
             //{
@@ -53,18 +49,15 @@ namespace OnlineStoreWinform
 
             // update
 
-            //clsProductCatalog productcatalog = clsProductCatalog.Find(1);
+            //clsProductImages productimages = clsProductImages.Find(1);
 
-            //if (productcatalog != null)
+            //if (productimages != null)
             //{
-            //    productcatalog.ProductName = "Laptop Inspiron";
-            //    productcatalog.Description = "Laptop";
-            //    productcatalog.Price = 320;
-            //    productcatalog.QuantityInStock = 1;
-            //    productcatalog.ImageURL = "d:\\";
-            //    productcatalog.CategoryID = 1;
+            //    productimages.ImageURL = "E:\\";
+            //    productimages.ImageOrder = 1;
+            //    productimages.ProductID = 1;
 
-            //    if (productcatalog.Save())
+            //    if (productimages.Save())
             //    {
             //        MessageBox.Show("Updated");
             //    }
@@ -76,7 +69,7 @@ namespace OnlineStoreWinform
 
             // delete
 
-            bool IsDeleted = clsProductCatalog.DeleteProductCatalog(3);
+            bool IsDeleted = clsProductImages.DeleteProductImages(3);
 
             if (IsDeleted)
                 MessageBox.Show("Deleted");
