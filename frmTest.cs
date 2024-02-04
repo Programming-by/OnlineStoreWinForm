@@ -24,24 +24,24 @@ namespace OnlineStoreWinform
         private void button1_Click(object sender, EventArgs e)
         {
             //get all
-            // dataGridView1.DataSource = clsOrder.GetAllOrders();
+            // dataGridView1.DataSource = clsPayment.GetAllPayments();
 
             //find
-            //clsOrder order = clsOrder.Find(1);
+            //clsPayment payment = clsPayment.Find(1);
 
-            //MessageBox.Show(order.TotalAmount.ToString());
+            //MessageBox.Show(payment.PaymentMethod.ToString());
 
             //add new
-            //clsOrder order = new clsOrder();
+            //clsPayment payment = new clsPayment();
 
-            //order.CustomerID = 1;
-            //order.OrderDate = DateTime.Parse("2023-08-01");
-            //order.TotalAmount = 350;
-            //order.Status = (clsOrder.enStatus)3;
+            //payment.OrderID = 1;
+            //payment.Amount = 350;
+            //payment.PaymentMethod = "Cash";
+            //payment.TransactionDate = DateTime.Parse("2023-08-01");
 
-            //if (order.Save())
+            //if (payment.Save())
             //{
-            //    MessageBox.Show(order.OrderID.ToString());
+            //    MessageBox.Show(payment.PaymentID.ToString());
 
             //}
             //else
@@ -51,18 +51,17 @@ namespace OnlineStoreWinform
 
             // update
 
-            //clsOrder order = clsOrder.Find(1);
+            //clsPayment payment = clsPayment.Find(1);
 
-            //if (order != null)
+            //if (payment != null)
             //{
-            //    order.CustomerID = 2;
-            //    order.OrderDate = DateTime.Parse("2023-08-20");
-            //    order.TotalAmount = 552;
-            //    order.Status = (clsOrder.enStatus)5;
-            //    if (order.Save())
+            //    payment.OrderID = 2;
+            //    payment.Amount = 600;
+            //    payment.PaymentMethod = "Master Card";
+            //    payment.TransactionDate = DateTime.Parse("2023-08-10");
+            //    if (payment.Save())
             //    {
             //        MessageBox.Show("Updated");
-
             //    }
             //    else
             //    {
@@ -71,15 +70,15 @@ namespace OnlineStoreWinform
 
             // delete
 
-            //bool IsDeleted = clsOrder.DeleteOrder(3);
+            bool IsDeleted = clsPayment.DeletePayment(3);
 
-            //if (IsDeleted)
-            //    MessageBox.Show("Deleted");
-            //else
-            //    MessageBox.Show("Not Deleted");
+            if (IsDeleted)
+                MessageBox.Show("Deleted");
+            else
+                MessageBox.Show("Not Deleted");
 
 
 
-            }
+        }
     }
 }
