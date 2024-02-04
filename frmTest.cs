@@ -24,36 +24,47 @@ namespace OnlineStoreWinform
         private void button1_Click(object sender, EventArgs e)
         {
             //get all
-            //dataGridView1.DataSource = clsProductCategory.GetAllProductCategory();
+            // dataGridView1.DataSource = clsProductCatalog.GetAllProductCatalogs();
 
             //find
-            //clsProductCategory productcategory = clsProductCategory.Find(1);
+            //clsProductCatalog productcatalog = clsProductCatalog.Find(1);
 
-            //MessageBox.Show(productcategory.CategoryName.ToString());
+            //MessageBox.Show(productcatalog.ProductName.ToString());
 
             //add new
-            //clsProductCategory productcategory = new clsProductCategory();
+            //clsProductCatalog productcatalog = new clsProductCatalog();
 
-            //productcategory.CategoryName = "Books";
+            //productcatalog.ProductName = "Pride and Prejudice ";
+            //productcatalog.Description = "book";
+            //productcatalog.Price = 15;
+            //productcatalog.QuantityInStock = 1;
+            //productcatalog.ImageURL = "c:\\";
+            //productcatalog.CategoryID = 2;
 
-            //if (productcategory.Save())
+            //if (productcatalog.Save())
             //{
-            //    MessageBox.Show(productcategory.CategoryID.ToString());
+            //    MessageBox.Show(productcatalog.ProductID.ToString());
 
             //}
             //else
             //{
-            //    MessageBox.Show("dd");
+            //    MessageBox.Show("failed");
             //}
 
             // update
 
-            clsProductCategory productcategory = clsProductCategory.Find(1);
+            //clsProductCatalog productcatalog = clsProductCatalog.Find(1);
 
-            //if (productcategory != null)
+            //if (productcatalog != null)
             //{
-            //    productcategory.CategoryName = "Electronics";
-            //    if (productcategory.Save())
+            //    productcatalog.ProductName = "Laptop Inspiron";
+            //    productcatalog.Description = "Laptop";
+            //    productcatalog.Price = 320;
+            //    productcatalog.QuantityInStock = 1;
+            //    productcatalog.ImageURL = "d:\\";
+            //    productcatalog.CategoryID = 1;
+
+            //    if (productcatalog.Save())
             //    {
             //        MessageBox.Show("Updated");
             //    }
@@ -65,7 +76,7 @@ namespace OnlineStoreWinform
 
             // delete
 
-            bool IsDeleted = clsProductCategory.DeleteProductCategory(3);
+            bool IsDeleted = clsProductCatalog.DeleteProductCatalog(3);
 
             if (IsDeleted)
                 MessageBox.Show("Deleted");
