@@ -24,24 +24,26 @@ namespace OnlineStoreWinform
         private void button1_Click(object sender, EventArgs e)
         {
             //get all
-            // dataGridView1.DataSource = clsPayment.GetAllPayments();
+            //dataGridView1.DataSource = clsShipping.GetAllShipping();
 
             //find
-            //clsPayment payment = clsPayment.Find(1);
+            //clsShipping shipping = clsShipping.Find(1);
 
-            //MessageBox.Show(payment.PaymentMethod.ToString());
+            //MessageBox.Show(shipping.CarrierName.ToString());
 
             //add new
-            //clsPayment payment = new clsPayment();
+            //clsShipping shipping = new clsShipping();
 
-            //payment.OrderID = 1;
-            //payment.Amount = 350;
-            //payment.PaymentMethod = "Cash";
-            //payment.TransactionDate = DateTime.Parse("2023-08-01");
+            //shipping.OrderID = 1;
+            //shipping.CarrierName = "Aramex";
+            //shipping.TrackingNumber = "248";
+            //shipping.ShippingStatus = (clsShipping.enShippingStatus)3;
+            //shipping.EstimatedDeliveryDate = DateTime.Parse("2024-03-01");
+            //shipping.ActualDeliveryDate = DateTime.Parse("2024-05-02");
 
-            //if (payment.Save())
+            //if (shipping.Save())
             //{
-            //    MessageBox.Show(payment.PaymentID.ToString());
+            //    MessageBox.Show(shipping.ShippingID.ToString());
 
             //}
             //else
@@ -51,15 +53,17 @@ namespace OnlineStoreWinform
 
             // update
 
-            //clsPayment payment = clsPayment.Find(1);
+            //clsShipping shipping = clsShipping.Find(1);
 
-            //if (payment != null)
+            //if (shipping != null)
             //{
-            //    payment.OrderID = 2;
-            //    payment.Amount = 600;
-            //    payment.PaymentMethod = "Master Card";
-            //    payment.TransactionDate = DateTime.Parse("2023-08-10");
-            //    if (payment.Save())
+            //    shipping.OrderID = 2;
+            //    shipping.CarrierName = "Aramex";
+            //    shipping.TrackingNumber = "15";
+            //    shipping.ShippingStatus = (clsShipping.enShippingStatus) 4;
+            //    shipping.EstimatedDeliveryDate = DateTime.Parse("2024-08-20");
+            //    shipping.ActualDeliveryDate = null;
+            //    if (shipping.Save())
             //    {
             //        MessageBox.Show("Updated");
             //    }
@@ -70,15 +74,14 @@ namespace OnlineStoreWinform
 
             // delete
 
-            bool IsDeleted = clsPayment.DeletePayment(3);
+            bool IsDeleted = clsShipping.DeleteShipping(5);
 
             if (IsDeleted)
                 MessageBox.Show("Deleted");
             else
                 MessageBox.Show("Not Deleted");
-
-
-
         }
-    }
+        }
+
+
 }
