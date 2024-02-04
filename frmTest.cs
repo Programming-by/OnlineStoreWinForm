@@ -24,45 +24,42 @@ namespace OnlineStoreWinform
         private void button1_Click(object sender, EventArgs e)
         {
             //get all
-            // dataGridView1.DataSource = clsCustomer.GetAllCustomer();
+            // dataGridView1.DataSource = clsOrder.GetAllOrders();
 
             //find
-            //clsCustomer customer = clsCustomer.Find(1);
+            //clsOrder order = clsOrder.Find(1);
 
-            //MessageBox.Show(customer.Email);
+            //MessageBox.Show(order.TotalAmount.ToString());
 
             //add new
-            //clsCustomer customer = new clsCustomer();
+            //clsOrder order = new clsOrder();
 
-            //customer.Name = "Mahmoud";
-            //customer.Email = "Mahmoud@gmail.com";
-            //customer.Phone = "55714";
-            //customer.Address = "Amman";
-            //customer.Username = "MahmoudN";
-            //customer.Password = "1234";
+            //order.CustomerID = 1;
+            //order.OrderDate = DateTime.Parse("2023-08-01");
+            //order.TotalAmount = 350;
+            //order.Status = (clsOrder.enStatus)3;
 
-            //if (customer.Save())
+            //if (order.Save())
             //{
-            //    MessageBox.Show(customer.CustomerID.ToString());
+            //    MessageBox.Show(order.OrderID.ToString());
 
-            //} else
+            //}
+            //else
             //{
-            //MessageBox.Show("dd");
+            //    MessageBox.Show("dd");
             //}
 
             // update
 
-            //clsCustomer customer = clsCustomer.Find(1);
+            //clsOrder order = clsOrder.Find(1);
 
-            //if (customer != null)
+            //if (order != null)
             //{
-            //    customer.Name = "AnasNaa";
-            //    customer.Email = "anasnaamneh@gmail.com";
-            //    customer.Phone = "5452";
-            //    customer.Address = "Madrid";
-            //    customer.Username = "AnasNaamneh";
-            //    customer.Password = "12345";
-            //    if (customer.Save())
+            //    order.CustomerID = 2;
+            //    order.OrderDate = DateTime.Parse("2023-08-20");
+            //    order.TotalAmount = 552;
+            //    order.Status = (clsOrder.enStatus)5;
+            //    if (order.Save())
             //    {
             //        MessageBox.Show("Updated");
 
@@ -72,17 +69,17 @@ namespace OnlineStoreWinform
             //        MessageBox.Show("failed");
             //    }
 
-            bool IsDeleted =  clsCustomer.DeleteCustomer(4);
+            // delete
 
-            if (IsDeleted)
-                MessageBox.Show("Deleted");
-            else
-                MessageBox.Show("Not Deleted");
+            //bool IsDeleted = clsOrder.DeleteOrder(3);
 
-        
+            //if (IsDeleted)
+            //    MessageBox.Show("Deleted");
+            //else
+            //    MessageBox.Show("Not Deleted");
 
 
 
-    }
+            }
     }
 }
