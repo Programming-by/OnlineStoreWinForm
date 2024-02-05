@@ -27,22 +27,22 @@ namespace OnlineStoreWinform
             //dataGridView1.DataSource = clsOrderItem.GetAllOrderItems();
 
             //find
-            //clsReview review = clsReview.Find(1);
+            //clsOrderItem item = clsOrderItem.Find(1);
 
-            //MessageBox.Show(review.ReviewText.ToString());
+            // MessageBox.Show(item.TotalItemsPrice.ToString());
 
             //add new
-            //clsReview review = new clsReview();
+            //clsOrderItem item = new clsOrderItem();
 
-            //review.ProductID = 2;
-            //review.CustomerID = 2;
-            //review.ReviewText = "Excellent";
-            //review.Rating = 9;
-            //review.ReviewDate = DateTime.Parse( "2024-01-15");
+            //item.OrderID = 1;
+            //item.ProductID = 1;
+            //item.Quantity = 1;
+            //item.Price = 552;
+            //item.TotalItemsPrice = 552;
 
-            //if (review.Save())
+            //if (item.Save())
             //{
-            //    MessageBox.Show(review.ReviewID.ToString());
+            //    MessageBox.Show(item.OrderID.ToString());
             //}
             //else
             //{
@@ -51,17 +51,17 @@ namespace OnlineStoreWinform
 
             // update
 
-            //clsReview review = clsReview.Find(2);
+            //clsOrderItem item = clsOrderItem.Find(5);
 
-            //review.ProductID = 1;
-            //review.CustomerID = 2;
-            //review.ReviewText = "Bad";
-            //review.Rating = 2;
-            //review.ReviewDate = DateTime.Parse("2024-01-04");
+            //item.OrderID = 2;
+            //item.ProductID = 2;
+            //item.Quantity = 2;
+            //item.Price = 552;
+            //item.TotalItemsPrice = 1104;
 
-            //if (review.Save())
+            //if (item.Save())
             //{
-            //    MessageBox.Show(review.ReviewID.ToString());
+            //    MessageBox.Show(item.OrderID.ToString());
             //}
             //else
             //{
