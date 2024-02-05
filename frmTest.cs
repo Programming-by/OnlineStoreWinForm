@@ -24,23 +24,25 @@ namespace OnlineStoreWinform
         private void button1_Click(object sender, EventArgs e)
         {
             //get all
-            // dataGridView1.DataSource = clsProductImages.GetAllProductImages();
+            //dataGridView1.DataSource = clsOrderItem.GetAllOrderItems();
 
             //find
-            //clsProductImages productimages = clsProductImages.Find(1);
+            //clsReview review = clsReview.Find(1);
 
-            //MessageBox.Show(productimages.ProductID.ToString());
+            //MessageBox.Show(review.ReviewText.ToString());
 
             //add new
-            //clsProductImages productimages = new clsProductImages();
+            //clsReview review = new clsReview();
 
-            //productimages.ImageURL = "f:\\ ";
-            //productimages.ImageOrder = 1;
-            //productimages.ProductID = 2;
+            //review.ProductID = 2;
+            //review.CustomerID = 2;
+            //review.ReviewText = "Excellent";
+            //review.Rating = 9;
+            //review.ReviewDate = DateTime.Parse( "2024-01-15");
 
-            //if (productimages.Save())
+            //if (review.Save())
             //{
-            //    MessageBox.Show(productimages.ID.ToString());
+            //    MessageBox.Show(review.ReviewID.ToString());
             //}
             //else
             //{
@@ -49,32 +51,31 @@ namespace OnlineStoreWinform
 
             // update
 
-            //clsProductImages productimages = clsProductImages.Find(1);
+            //clsReview review = clsReview.Find(2);
 
-            //if (productimages != null)
+            //review.ProductID = 1;
+            //review.CustomerID = 2;
+            //review.ReviewText = "Bad";
+            //review.Rating = 2;
+            //review.ReviewDate = DateTime.Parse("2024-01-04");
+
+            //if (review.Save())
             //{
-            //    productimages.ImageURL = "E:\\";
-            //    productimages.ImageOrder = 1;
-            //    productimages.ProductID = 1;
-
-            //    if (productimages.Save())
-            //    {
-            //        MessageBox.Show("Updated");
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("failed");
-            //    }
+            //    MessageBox.Show(review.ReviewID.ToString());
+            //}
+            //else
+            //{
+            //    MessageBox.Show("failed");
             //}
 
             // delete
 
-            bool IsDeleted = clsProductImages.DeleteProductImages(3);
+            //bool IsDeleted = clsOrderItem.DeleteOrderItem(2);
 
-            if (IsDeleted)
-                MessageBox.Show("Deleted");
-            else
-                MessageBox.Show("Not Deleted");
+            //if (IsDeleted)
+            //    MessageBox.Show("Deleted");
+            //else
+            //    MessageBox.Show("Not Deleted");
         }
     }
 
