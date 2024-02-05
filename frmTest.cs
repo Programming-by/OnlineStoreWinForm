@@ -76,6 +76,14 @@ namespace OnlineStoreWinform
             //    MessageBox.Show("Deleted");
             //else
             //    MessageBox.Show("Not Deleted");
+
+
+            bool IsFound = clsShipping.IsShippingExists(10);
+
+            if (IsFound)
+                MessageBox.Show("Found");
+            else
+                MessageBox.Show("Not Found");
         }
     }
 
