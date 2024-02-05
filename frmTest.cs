@@ -78,7 +78,7 @@ namespace OnlineStoreWinform
             //    MessageBox.Show("Not Deleted");
 
 
-            bool IsFound = clsShipping.IsShippingExists(10);
+            bool IsFound = clsReview.IsReviewExists(1);
 
             if (IsFound)
                 MessageBox.Show("Found");
