@@ -47,5 +47,32 @@ namespace OnlineStoreWinform.Customers
                 dgvCustomers.Columns[6].Width = 150;
             }
         }
+
+        private void btnAddNewCustomer_Click(object sender, EventArgs e)
+        {
+            frmAddNewCustomer frm = new frmAddNewCustomer();
+
+            frm.ShowDialog();
+        }
+
+        private void showCustomerDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addNewCustomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
