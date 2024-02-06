@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -62,7 +63,11 @@ namespace OnlineStoreWinform.Customers
 
         private void addNewCustomerToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmAddEditCustomer frm = new frmAddEditCustomer();
 
+            frm.ShowDialog();
+
+            FrmListCustomers_Load(null, null);
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,6 +81,17 @@ namespace OnlineStoreWinform.Customers
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Are you sure you want to delete this customer " + ((int)dgvCustomers.CurrentRow.Cells[0].Value), "Success", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
+                return;
+
+            if (clsCustomer.DeleteCustomer((int)dgvCustomers.CurrentRow.Cells[0].Value))
+            {
+            MessageBox.Show("Customer Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            FrmListCustomers_Load(null, null); 
+
+            } else
+                MessageBox.Show("Customer Failed to Delete");
+
 
         }
     }
