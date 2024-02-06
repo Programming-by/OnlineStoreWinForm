@@ -12,19 +12,19 @@ using System.Windows.Forms;
 
 namespace OnlineStoreWinform.Customers
 {
-    public partial class frmAddNewCustomer : Form
+    public partial class frmAddEditCustomer : Form
     {
         int _CustomerID;
         public enum enMode { AddNew = 0, Update = 1 }
 
         enMode Mode;
         clsCustomer _Customer;
-        public frmAddNewCustomer()
+        public frmAddEditCustomer()
         {
             InitializeComponent();
             Mode = enMode.AddNew;
         }
-        public frmAddNewCustomer(int CustomerID)
+        public frmAddEditCustomer(int CustomerID)
         {
             InitializeComponent();
             _CustomerID = CustomerID;
@@ -37,19 +37,41 @@ namespace OnlineStoreWinform.Customers
             this.Close();
         }
 
-
-        private void frmAddNewCustomer_Load(object sender, EventArgs e)
+        private void _ResetDefaultValues()
         {
             if (Mode == enMode.AddNew)
             {
                 _Customer = new clsCustomer();
                 lblTitle.Text = "Add New Customer";
                 this.Text = lblTitle.Text;
-            } else
-            {
-
             }
-
+            else
+            {
+                lblTitle.Text = "Update Customer";
+                this.Text = lblTitle.Text;
+            }
+        }
+        private void _LoadData()
+        {
+            _Customer = clsCustomer.Find(_CustomerID);
+            if (_Customer == null)
+            {
+                MessageBox.Show("Customer is not found", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            lblCustomerID.Text = _Customer.CustomerID.ToString();
+            txtName.Text = _Customer.Name;
+            txtEmail.Text = _Customer.Email;
+            txtPhone.Text = _Customer.Phone;
+            txtAddress.Text = _Customer.Address;
+            txtUsername.Text = _Customer.Username;
+            txtPassword.Text = _Customer.Password;
+        }
+        private void frmAddNewCustomer_Load(object sender, EventArgs e)
+        {
+            _ResetDefaultValues();
+            if (Mode == enMode.Update)
+            _LoadData();
         }
 
         private void ValidateTextBox(object sender, CancelEventArgs e)

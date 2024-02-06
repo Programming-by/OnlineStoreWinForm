@@ -1,6 +1,6 @@
 ﻿namespace OnlineStoreWinform.Customers
 {
-    partial class frmAddNewCustomer
+    partial class frmAddEditCustomer
     {
         /// <summary>
         /// Required designer variable.
@@ -55,7 +55,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Navy;
-            this.lblTitle.Location = new System.Drawing.Point(286, 38);
+            this.lblTitle.Location = new System.Drawing.Point(207, 38);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(138, 25);
             this.lblTitle.TabIndex = 1;
@@ -199,13 +199,14 @@
             this.txtPassword.Location = new System.Drawing.Point(207, 386);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(204, 31);
             this.txtPassword.TabIndex = 15;
             this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateTextBox);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(414, 457);
+            this.btnSave.Location = new System.Drawing.Point(340, 457);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(138, 77);
             this.btnSave.TabIndex = 16;
@@ -215,7 +216,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(207, 457);
+            this.btnClose.Location = new System.Drawing.Point(53, 457);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(138, 77);
             this.btnClose.TabIndex = 17;
@@ -231,7 +232,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 573);
+            this.ClientSize = new System.Drawing.Size(592, 573);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtPassword);

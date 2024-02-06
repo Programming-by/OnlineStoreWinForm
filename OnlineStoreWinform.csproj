@@ -49,11 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customers\frmAddNewCustomer.cs">
+    <Compile Include="Customers\frmAddEditCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customers\frmAddNewCustomer.Designer.cs">
-      <DependentUpon>frmAddNewCustomer.cs</DependentUpon>
+    <Compile Include="Customers\frmAddEditCustomer.Designer.cs">
+      <DependentUpon>frmAddEditCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="Customers\FrmListCustomers.cs">
       <SubType>Form</SubType>
@@ -82,8 +82,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Customers\frmAddNewCustomer.resx">
-      <DependentUpon>frmAddNewCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="Customers\frmAddEditCustomer.resx">
+      <DependentUpon>frmAddEditCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customers\FrmListCustomers.resx">
       <DependentUpon>FrmListCustomers.cs</DependentUpon>

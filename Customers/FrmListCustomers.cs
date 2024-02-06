@@ -50,7 +50,7 @@ namespace OnlineStoreWinform.Customers
 
         private void btnAddNewCustomer_Click(object sender, EventArgs e)
         {
-            frmAddNewCustomer frm = new frmAddNewCustomer();
+            frmAddEditCustomer frm = new frmAddEditCustomer();
 
             frm.ShowDialog();
         }
@@ -67,7 +67,11 @@ namespace OnlineStoreWinform.Customers
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmAddEditCustomer frm = new frmAddEditCustomer((int)dgvCustomers.CurrentRow.Cells[0].Value);
 
+            frm.ShowDialog();
+
+            FrmListCustomers_Load(null,null);
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)

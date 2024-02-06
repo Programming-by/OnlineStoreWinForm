@@ -17,4 +17,4 @@ C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.frmTe
 C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.Login.frmLogin.resources
 C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.Customers.FrmListCustomers.resources
 C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.frmMain.resources
-C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.Customers.frmAddNewCustomer.resources
+C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.Customers.frmAddEditCustomer.resources
