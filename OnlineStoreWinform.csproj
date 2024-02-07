@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customers\Controls\ctrlShowCustomersDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customers\Controls\ctrlShowCustomersDetails.Designer.cs">
+      <DependentUpon>ctrlShowCustomersDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customers\frmAddEditCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,12 @@
     </Compile>
     <Compile Include="Customers\FrmListCustomers.Designer.cs">
       <DependentUpon>FrmListCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\frmShowCustomerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\frmShowCustomerDetails.Designer.cs">
+      <DependentUpon>frmShowCustomerDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -82,11 +94,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Customers\Controls\ctrlShowCustomersDetails.resx">
+      <DependentUpon>ctrlShowCustomersDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customers\frmAddEditCustomer.resx">
       <DependentUpon>frmAddEditCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customers\FrmListCustomers.resx">
       <DependentUpon>FrmListCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\frmShowCustomerDetails.resx">
+      <DependentUpon>frmShowCustomerDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

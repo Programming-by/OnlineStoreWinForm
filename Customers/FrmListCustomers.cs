@@ -24,7 +24,7 @@ namespace OnlineStoreWinform.Customers
             dgvCustomers.DataSource = _dtCustomers;
             lblCustomersCount.Text = _dtCustomers.Rows.Count.ToString();
 
-            if (_dtCustomers.Rows.Count > 0 )
+            if (_dtCustomers.Rows.Count > 0)
             {
                 dgvCustomers.Columns[0].HeaderText = "CustomerID";
                 dgvCustomers.Columns[0].Width = 80;
@@ -58,7 +58,9 @@ namespace OnlineStoreWinform.Customers
 
         private void showCustomerDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmShowCustomerDetails frm = new frmShowCustomerDetails(((int)dgvCustomers.CurrentRow.Cells[0].Value));
 
+            frm.ShowDialog();
         }
 
         private void addNewCustomerToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,7 +78,7 @@ namespace OnlineStoreWinform.Customers
 
             frm.ShowDialog();
 
-            FrmListCustomers_Load(null,null);
+            FrmListCustomers_Load(null, null);
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -86,13 +88,21 @@ namespace OnlineStoreWinform.Customers
 
             if (clsCustomer.DeleteCustomer((int)dgvCustomers.CurrentRow.Cells[0].Value))
             {
-            MessageBox.Show("Customer Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            FrmListCustomers_Load(null, null); 
+                MessageBox.Show("Customer Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FrmListCustomers_Load(null, null);
 
-            } else
+            }
+            else
                 MessageBox.Show("Customer Failed to Delete");
 
 
+        }
+
+        private void dgvCustomers_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmShowCustomerDetails frm = new frmShowCustomerDetails(((int)dgvCustomers.CurrentRow.Cells[0].Value));
+
+            frm.ShowDialog();
         }
     }
 }

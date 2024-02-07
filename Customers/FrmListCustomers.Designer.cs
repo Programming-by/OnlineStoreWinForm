@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
-            this.lblCustomersCount = new System.Windows.Forms.Label();
-            this.btnAddNewCustomer = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showCustomerDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblCustomersCount = new System.Windows.Forms.Label();
+            this.btnAddNewCustomer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,27 +66,7 @@
             this.dgvCustomers.RowTemplate.Height = 24;
             this.dgvCustomers.Size = new System.Drawing.Size(706, 242);
             this.dgvCustomers.TabIndex = 1;
-            // 
-            // lblCustomersCount
-            // 
-            this.lblCustomersCount.AutoSize = true;
-            this.lblCustomersCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomersCount.ForeColor = System.Drawing.Color.Navy;
-            this.lblCustomersCount.Location = new System.Drawing.Point(43, 401);
-            this.lblCustomersCount.Name = "lblCustomersCount";
-            this.lblCustomersCount.Size = new System.Drawing.Size(184, 25);
-            this.lblCustomersCount.TabIndex = 2;
-            this.lblCustomersCount.Text = "Manage Customers";
-            // 
-            // btnAddNewCustomer
-            // 
-            this.btnAddNewCustomer.Location = new System.Drawing.Point(679, 62);
-            this.btnAddNewCustomer.Name = "btnAddNewCustomer";
-            this.btnAddNewCustomer.Size = new System.Drawing.Size(75, 60);
-            this.btnAddNewCustomer.TabIndex = 3;
-            this.btnAddNewCustomer.Text = "Add";
-            this.btnAddNewCustomer.UseVisualStyleBackColor = true;
-            this.btnAddNewCustomer.Click += new System.EventHandler(this.btnAddNewCustomer_Click);
+            this.dgvCustomers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomers_CellDoubleClick);
             // 
             // contextMenuStrip1
             // 
@@ -97,7 +77,7 @@
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(232, 128);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(232, 100);
             // 
             // showCustomerDetailsToolStripMenuItem
             // 
@@ -126,6 +106,27 @@
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(231, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // lblCustomersCount
+            // 
+            this.lblCustomersCount.AutoSize = true;
+            this.lblCustomersCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomersCount.ForeColor = System.Drawing.Color.Navy;
+            this.lblCustomersCount.Location = new System.Drawing.Point(43, 401);
+            this.lblCustomersCount.Name = "lblCustomersCount";
+            this.lblCustomersCount.Size = new System.Drawing.Size(184, 25);
+            this.lblCustomersCount.TabIndex = 2;
+            this.lblCustomersCount.Text = "Manage Customers";
+            // 
+            // btnAddNewCustomer
+            // 
+            this.btnAddNewCustomer.Location = new System.Drawing.Point(679, 62);
+            this.btnAddNewCustomer.Name = "btnAddNewCustomer";
+            this.btnAddNewCustomer.Size = new System.Drawing.Size(75, 60);
+            this.btnAddNewCustomer.TabIndex = 3;
+            this.btnAddNewCustomer.Text = "Add";
+            this.btnAddNewCustomer.UseVisualStyleBackColor = true;
+            this.btnAddNewCustomer.Click += new System.EventHandler(this.btnAddNewCustomer_Click);
             // 
             // FrmListCustomers
             // 
