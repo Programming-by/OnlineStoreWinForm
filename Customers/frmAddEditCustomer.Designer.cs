@@ -57,9 +57,9 @@
             this.lblTitle.ForeColor = System.Drawing.Color.Navy;
             this.lblTitle.Location = new System.Drawing.Point(207, 38);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(138, 25);
+            this.lblTitle.Size = new System.Drawing.Size(176, 25);
             this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "Add Customer";
+            this.lblTitle.Text = "Add Edit Customer";
             // 
             // label2
             // 
@@ -228,7 +228,7 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // frmAddNewCustomer
+            // frmAddEditCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -250,7 +250,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTitle);
-            this.Name = "frmAddNewCustomer";
+            this.Name = "frmAddEditCustomer";
             this.Text = "frmAddNewCustomer";
             this.Load += new System.EventHandler(this.frmAddNewCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

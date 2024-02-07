@@ -21,6 +21,7 @@ namespace OnlineStoreWinform.Customers
         private DataTable _dtCustomers = clsCustomer.GetAllCustomer();
         private void FrmListCustomers_Load(object sender, EventArgs e)
         {
+            _dtCustomers = clsCustomer.GetAllCustomer();
             dgvCustomers.DataSource = _dtCustomers;
             lblCustomersCount.Text = _dtCustomers.Rows.Count.ToString();
 

@@ -36,8 +36,9 @@
             this.addNewCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblCustomersCount = new System.Windows.Forms.Label();
             this.btnAddNewCustomer = new System.Windows.Forms.Button();
+            this.lblCustomersCount = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -107,17 +108,6 @@
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
-            // lblCustomersCount
-            // 
-            this.lblCustomersCount.AutoSize = true;
-            this.lblCustomersCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomersCount.ForeColor = System.Drawing.Color.Navy;
-            this.lblCustomersCount.Location = new System.Drawing.Point(43, 401);
-            this.lblCustomersCount.Name = "lblCustomersCount";
-            this.lblCustomersCount.Size = new System.Drawing.Size(184, 25);
-            this.lblCustomersCount.TabIndex = 2;
-            this.lblCustomersCount.Text = "Manage Customers";
-            // 
             // btnAddNewCustomer
             // 
             this.btnAddNewCustomer.Location = new System.Drawing.Point(679, 62);
@@ -128,13 +118,36 @@
             this.btnAddNewCustomer.UseVisualStyleBackColor = true;
             this.btnAddNewCustomer.Click += new System.EventHandler(this.btnAddNewCustomer_Click);
             // 
+            // lblCustomersCount
+            // 
+            this.lblCustomersCount.AutoSize = true;
+            this.lblCustomersCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomersCount.ForeColor = System.Drawing.Color.Navy;
+            this.lblCustomersCount.Location = new System.Drawing.Point(233, 401);
+            this.lblCustomersCount.Name = "lblCustomersCount";
+            this.lblCustomersCount.Size = new System.Drawing.Size(45, 25);
+            this.lblCustomersCount.TabIndex = 4;
+            this.lblCustomersCount.Text = "???";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Navy;
+            this.label2.Location = new System.Drawing.Point(52, 401);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(165, 25);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Customers Count";
+            // 
             // FrmListCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnAddNewCustomer);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblCustomersCount);
+            this.Controls.Add(this.btnAddNewCustomer);
             this.Controls.Add(this.dgvCustomers);
             this.Controls.Add(this.label1);
             this.Name = "FrmListCustomers";
@@ -151,12 +164,13 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvCustomers;
-        private System.Windows.Forms.Label lblCustomersCount;
         private System.Windows.Forms.Button btnAddNewCustomer;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem showCustomerDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewCustomerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.Label lblCustomersCount;
+        private System.Windows.Forms.Label label2;
     }
 }
