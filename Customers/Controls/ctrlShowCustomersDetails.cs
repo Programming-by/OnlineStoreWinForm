@@ -18,10 +18,21 @@ namespace OnlineStoreWinform.Customers.Controls
             InitializeComponent();
         }
 
-        clsCustomer _Customer;
+      private  clsCustomer _Customer;
 
+       public clsCustomer SelectedCustomerInfo { get { return _Customer; } }
+
+        private int? _CustomerID;
+
+        public int? CustomerID { 
+            
+            get { return _CustomerID; }
+        
+          set { _CustomerID = value; }
+        }
         private void _FillCustomerInfo()
         {
+            _CustomerID = _Customer.CustomerID;
             lblCustomerID.Text = _Customer.CustomerID.ToString();
             lblName.Text = _Customer.Name;
             lblEmail.Text = _Customer.Email;
@@ -29,7 +40,7 @@ namespace OnlineStoreWinform.Customers.Controls
             lblAddress.Text = _Customer.Address;
             lblUsername.Text = _Customer.Username;
         }
-        public void LoadCustomerInfo(int CustomerID)
+        public void LoadCustomerInfo(int? CustomerID)
         {
             _Customer = clsCustomer.Find(CustomerID);
 

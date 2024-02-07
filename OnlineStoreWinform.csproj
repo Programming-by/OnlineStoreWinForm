@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customers\Controls\ctrlShowCustomerDetailsWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customers\Controls\ctrlShowCustomerDetailsWithFilter.Designer.cs">
+      <DependentUpon>ctrlShowCustomerDetailsWithFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customers\Controls\ctrlShowCustomersDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -92,6 +98,12 @@
     <Compile Include="Login\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Orders\frmListOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\frmListOrders.Designer.cs">
+      <DependentUpon>frmListOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductCategory\frmAddEditProductCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +118,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Customers\Controls\ctrlShowCustomerDetailsWithFilter.resx">
+      <DependentUpon>ctrlShowCustomerDetailsWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customers\Controls\ctrlShowCustomersDetails.resx">
       <DependentUpon>ctrlShowCustomersDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\frmListOrders.resx">
+      <DependentUpon>frmListOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductCategory\frmAddEditProductCategory.resx">
       <DependentUpon>frmAddEditProductCategory.cs</DependentUpon>

@@ -19,6 +19,10 @@ namespace OnlineStoreWinform.Customers
 
         enMode Mode;
         clsCustomer _Customer;
+
+        public delegate void DatabackHandler(object sender , int? CustomerID);
+
+        public event DatabackHandler DataBack;
         public frmAddEditCustomer()
         {
             InitializeComponent();
@@ -121,6 +125,7 @@ namespace OnlineStoreWinform.Customers
             if (_Customer.Save())
             {
                 Mode = enMode.Update;
+                DataBack?.Invoke(this, _Customer.CustomerID);
                 lblCustomerID.Text = _Customer.CustomerID.ToString();
                 MessageBox.Show("Data Saved Successfully", "Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }

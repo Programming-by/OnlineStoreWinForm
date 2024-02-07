@@ -1,4 +1,5 @@
 ﻿using OnlineStoreWinform.Customers;
+using OnlineStoreWinform.Orders;
 using OnlineStoreWinform.ProductCategory;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,13 @@ namespace OnlineStoreWinform
         private void categoriesToolStripMenuItem_Click(object sender, EventArgs e)
         {
            frmListProductCategory frm = new frmListProductCategory();
+
+            frm.ShowDialog();
+        }
+
+        private void ordersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListOrders frm = new frmListOrders();
 
             frm.ShowDialog();
         }
