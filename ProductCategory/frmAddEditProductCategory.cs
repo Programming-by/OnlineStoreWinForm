@@ -27,6 +27,7 @@ namespace OnlineStoreWinform.ProductCategory
         {
             InitializeComponent();
             _CategoryID = CategoryID;
+            Mode = enMode.Update;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -63,8 +64,19 @@ namespace OnlineStoreWinform.ProductCategory
 
         private void _LoadData()
         {
+            _ProductCategory = clsProductCategory.Find(_CategoryID);
 
-        }
+            if (_ProductCategory == null) 
+            {
+                MessageBox.Show("Category is not found", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+            }
+
+            lblCategoryID.Text = _ProductCategory.CategoryID.ToString();
+            txtCategoryName.Text = _ProductCategory.CategoryName;
+
+            }
         private void frmAddEditProductCategory_Load(object sender, EventArgs e)
         {
         _ResetDefaultValues();

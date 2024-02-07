@@ -61,7 +61,18 @@ namespace OnlineStoreWinform.ProductCategory
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Are you sure you want to delete this Category " + (int)dgvProductCategory.CurrentRow.Cells[0].Value,"",MessageBoxButtons.OKCancel,MessageBoxIcon.Question) == DialogResult.Cancel)
+                return;
 
+            int CategoryID = (int)dgvProductCategory.CurrentRow.Cells[0].Value;
+            if (clsProductCategory.DeleteProductCategory(CategoryID))
+            {
+                MessageBox.Show("Deleted Successfully", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmListProductCategory_Load(null,null);
+            } else
+            {
+                MessageBox.Show("Failed to Delete");
+            }
         }
     }
 }

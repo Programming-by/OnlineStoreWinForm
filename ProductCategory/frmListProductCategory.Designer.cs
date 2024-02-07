@@ -103,7 +103,7 @@
             this.lblCustomersCount.AutoSize = true;
             this.lblCustomersCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomersCount.ForeColor = System.Drawing.Color.Navy;
-            this.lblCustomersCount.Location = new System.Drawing.Point(270, 394);
+            this.lblCustomersCount.Location = new System.Drawing.Point(305, 394);
             this.lblCustomersCount.Name = "lblCustomersCount";
             this.lblCustomersCount.Size = new System.Drawing.Size(45, 25);
             this.lblCustomersCount.TabIndex = 8;
