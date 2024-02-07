@@ -31,10 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.dgvOrders = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.showCustomerDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addNewCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showOrderDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addNewOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblOrdersCount = new System.Windows.Forms.Label();
@@ -61,36 +60,32 @@
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showCustomerDetailsToolStripMenuItem,
-            this.addNewCustomerToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.deleteToolStripMenuItem});
+            this.showOrderDetailsToolStripMenuItem,
+            this.addNewOrderToolStripMenuItem,
+            this.editToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(232, 100);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 104);
             // 
-            // showCustomerDetailsToolStripMenuItem
+            // showOrderDetailsToolStripMenuItem
             // 
-            this.showCustomerDetailsToolStripMenuItem.Name = "showCustomerDetailsToolStripMenuItem";
-            this.showCustomerDetailsToolStripMenuItem.Size = new System.Drawing.Size(231, 24);
-            this.showCustomerDetailsToolStripMenuItem.Text = "Show Customer Details";
+            this.showOrderDetailsToolStripMenuItem.Name = "showOrderDetailsToolStripMenuItem";
+            this.showOrderDetailsToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.showOrderDetailsToolStripMenuItem.Text = "Show Order Details";
+            this.showOrderDetailsToolStripMenuItem.Click += new System.EventHandler(this.showOrderDetailsToolStripMenuItem_Click);
             // 
-            // addNewCustomerToolStripMenuItem
+            // addNewOrderToolStripMenuItem
             // 
-            this.addNewCustomerToolStripMenuItem.Name = "addNewCustomerToolStripMenuItem";
-            this.addNewCustomerToolStripMenuItem.Size = new System.Drawing.Size(231, 24);
-            this.addNewCustomerToolStripMenuItem.Text = "Add New Customer";
+            this.addNewOrderToolStripMenuItem.Name = "addNewOrderToolStripMenuItem";
+            this.addNewOrderToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.addNewOrderToolStripMenuItem.Text = "Add New Order";
+            this.addNewOrderToolStripMenuItem.Click += new System.EventHandler(this.addNewOrderToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(231, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.editToolStripMenuItem.Text = "Edit";
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(231, 24);
-            this.deleteToolStripMenuItem.Text = "Delete";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -133,6 +128,7 @@
             this.btnAddNewOrder.TabIndex = 8;
             this.btnAddNewOrder.Text = "Add";
             this.btnAddNewOrder.UseVisualStyleBackColor = true;
+            this.btnAddNewOrder.Click += new System.EventHandler(this.btnAddNewOrder_Click);
             // 
             // frmListOrders
             // 
@@ -158,10 +154,9 @@
 
         private System.Windows.Forms.DataGridView dgvOrders;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem showCustomerDetailsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addNewCustomerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showOrderDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addNewOrderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblOrdersCount;

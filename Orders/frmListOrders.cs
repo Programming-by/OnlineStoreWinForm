@@ -46,5 +46,29 @@ namespace OnlineStoreWinform.Orders
 
             }
         }
+
+        private void btnAddNewOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void showOrderDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int OrderID = (int)dgvOrders.CurrentRow.Cells[0].Value;
+            frmShowOrderDetails frm = new frmShowOrderDetails(OrderID);
+
+            frm.ShowDialog();
+        }
+
+        private void addNewOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

@@ -98,11 +98,23 @@
     <Compile Include="Login\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Orders\Controls\ctrlShowOrderDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Orders\Controls\ctrlShowOrderDetails.Designer.cs">
+      <DependentUpon>ctrlShowOrderDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Orders\frmListOrders.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Orders\frmListOrders.Designer.cs">
       <DependentUpon>frmListOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\frmShowOrderDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\frmShowOrderDetails.Designer.cs">
+      <DependentUpon>frmShowOrderDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductCategory\frmAddEditProductCategory.cs">
       <SubType>Form</SubType>
@@ -142,8 +154,14 @@
     <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Orders\Controls\ctrlShowOrderDetails.resx">
+      <DependentUpon>ctrlShowOrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Orders\frmListOrders.resx">
       <DependentUpon>frmListOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\frmShowOrderDetails.resx">
+      <DependentUpon>frmShowOrderDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductCategory\frmAddEditProductCategory.resx">
       <DependentUpon>frmAddEditProductCategory.cs</DependentUpon>
