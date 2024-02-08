@@ -52,6 +52,31 @@ namespace OnlineStoreWinform.Shippings
             lblStatus.Text = clsShipping.enShippingStatus.Processing.ToString();
         }
 
+        private void _LoadData()
+        {
+            _Shipping = clsShipping.Find(_ShippingID);
+
+            if (_Shipping == null)
+            {
+                MessageBox.Show("Payment is not found", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            ctrlShowOrderDetailsWithFilter1.FilterEnabled = false;
+            lblShippingID.Text = _Shipping.ShippingID.ToString();
+            ctrlShowOrderDetailsWithFilter1.LoadOrderInfo(_Shipping.OrderID);
+            txtCarrierName.Text = _Shipping.CarrierName;
+            txtTrackingNumber.Text = _Shipping.TrackingNumber.ToString();
+            if (_Shipping.EstimatedDeliveryDate > DateTime.Now)
+                dateTimePickerEstimated.Value = (DateTime)_Shipping.EstimatedDeliveryDate;
+            else
+                dateTimePickerEstimated.Value = DateTime.Now.AddDays(15);
+
+            if (_Shipping.ActualDeliveryDate > DateTime.Now)
+                dateTimePickerActual.Value = (DateTime)_Shipping.ActualDeliveryDate;
+            else
+                dateTimePickerActual.Value = DateTime.Now.AddDays(20);
+        }
+
 
 
         private void txtTrackingNumber_KeyPress(object sender, KeyPressEventArgs e)
@@ -125,7 +150,8 @@ namespace OnlineStoreWinform.Shippings
         private void frmAddEditShipping_Load(object sender, EventArgs e)
         {
             _ResetDefaultValues();
-
+            if (Mode == enMode.Update)
+                _LoadData();
         }
     }
     }
