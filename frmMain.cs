@@ -1,5 +1,6 @@
 ﻿using OnlineStoreWinform.Customers;
 using OnlineStoreWinform.Orders;
+using OnlineStoreWinform.Payments;
 using OnlineStoreWinform.ProductCategory;
 using System;
 using System.Collections.Generic;
@@ -37,6 +38,13 @@ namespace OnlineStoreWinform
         private void ordersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListOrders frm = new frmListOrders();
+
+            frm.ShowDialog();
+        }
+
+        private void paymentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListPayments frm = new frmListPayments();
 
             frm.ShowDialog();
         }

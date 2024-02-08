@@ -18,6 +18,10 @@ namespace OnlineStoreWinform.Orders
         enMode Mode;
 
         clsOrder _Order;
+
+        public delegate void DataBackHandler(object sender, int? OrderID);
+
+        public event DataBackHandler DataBack;
         public frmAddEditOrder()
         {
             InitializeComponent();
@@ -113,6 +117,7 @@ namespace OnlineStoreWinform.Orders
                 Mode = enMode.Update;
                 lblOrderID.Text = _Order.OrderID.ToString();
                 MessageBox.Show("Data Saved Successfully","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                DataBack?.Invoke(this,_Order.OrderID);
             } else
                 MessageBox.Show("Data Failed to Save", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
 

@@ -55,6 +55,7 @@
             this.dgvOrders.RowTemplate.Height = 24;
             this.dgvOrders.Size = new System.Drawing.Size(706, 242);
             this.dgvOrders.TabIndex = 7;
+            this.dgvOrders.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrders_CellDoubleClick);
             // 
             // contextMenuStrip1
             // 
@@ -64,26 +65,26 @@
             this.addNewOrderToolStripMenuItem,
             this.editToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 104);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(207, 76);
             // 
             // showOrderDetailsToolStripMenuItem
             // 
             this.showOrderDetailsToolStripMenuItem.Name = "showOrderDetailsToolStripMenuItem";
-            this.showOrderDetailsToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.showOrderDetailsToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
             this.showOrderDetailsToolStripMenuItem.Text = "Show Order Details";
             this.showOrderDetailsToolStripMenuItem.Click += new System.EventHandler(this.showOrderDetailsToolStripMenuItem_Click);
             // 
             // addNewOrderToolStripMenuItem
             // 
             this.addNewOrderToolStripMenuItem.Name = "addNewOrderToolStripMenuItem";
-            this.addNewOrderToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.addNewOrderToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
             this.addNewOrderToolStripMenuItem.Text = "Add New Order";
             this.addNewOrderToolStripMenuItem.Click += new System.EventHandler(this.addNewOrderToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 

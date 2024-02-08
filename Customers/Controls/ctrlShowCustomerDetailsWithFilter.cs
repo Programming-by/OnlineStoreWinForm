@@ -40,7 +40,7 @@ namespace OnlineStoreWinform.Customers.Controls
         }
         private void txtCustomerID_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
         }
 
         public void frm_DataBack(object sender, int? CustomerID)
@@ -71,6 +71,11 @@ namespace OnlineStoreWinform.Customers.Controls
         {
             txtCustomerID.Text = CustomerID.ToString();
             ctrlShowCustomersDetails1.LoadCustomerInfo(CustomerID);
+        }
+
+        private void txtOrderID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

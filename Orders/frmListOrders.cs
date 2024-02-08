@@ -81,5 +81,12 @@ namespace OnlineStoreWinform.Orders
             frmListOrders_Load(null, null);
         }
 
+        private void dgvOrders_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int OrderID = (int)dgvOrders.CurrentRow.Cells[0].Value;
+            frmShowOrderDetails frm = new frmShowOrderDetails(OrderID);
+
+            frm.ShowDialog();
+        }
     }
 }

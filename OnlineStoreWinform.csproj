@@ -104,6 +104,12 @@
     <Compile Include="Orders\Controls\ctrlShowOrderDetails.Designer.cs">
       <DependentUpon>ctrlShowOrderDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Orders\Controls\ctrlShowOrderDetailsWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Orders\Controls\ctrlShowOrderDetailsWithFilter.Designer.cs">
+      <DependentUpon>ctrlShowOrderDetailsWithFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Orders\frmAddEditOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,12 @@
     </Compile>
     <Compile Include="Orders\frmShowOrderDetails.Designer.cs">
       <DependentUpon>frmShowOrderDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\frmListPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\frmListPayments.Designer.cs">
+      <DependentUpon>frmListPayments.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductCategory\frmAddEditProductCategory.cs">
       <SubType>Form</SubType>
@@ -163,6 +175,9 @@
     <EmbeddedResource Include="Orders\Controls\ctrlShowOrderDetails.resx">
       <DependentUpon>ctrlShowOrderDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Orders\Controls\ctrlShowOrderDetailsWithFilter.resx">
+      <DependentUpon>ctrlShowOrderDetailsWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Orders\frmAddEditOrder.resx">
       <DependentUpon>frmAddEditOrder.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Orders\frmShowOrderDetails.resx">
       <DependentUpon>frmShowOrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\frmListPayments.resx">
+      <DependentUpon>frmListPayments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductCategory\frmAddEditProductCategory.resx">
       <DependentUpon>frmAddEditProductCategory.cs</DependentUpon>
