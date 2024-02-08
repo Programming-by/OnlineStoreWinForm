@@ -67,7 +67,7 @@ namespace OnlineStoreWinform.Orders.Controls
             frm.ShowDialog();
         }
 
-        public void LoadCustomerInfo(int? OrderID)
+        public void LoadOrderInfo(int? OrderID)
         {
             txtOrderID.Text = OrderID.ToString();
             ctrlShowOrderDetails1.LoadOrderInfo(OrderID);

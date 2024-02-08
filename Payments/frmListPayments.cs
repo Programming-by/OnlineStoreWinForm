@@ -58,5 +58,31 @@ namespace OnlineStoreWinform.Payments
             else
                 MessageBox.Show("Payment Failed to Delete");
         }
+
+        private void btnAddNewPayment_Click(object sender, EventArgs e)
+        {
+            frmAddEditPayment frm = new frmAddEditPayment();
+
+            frm.ShowDialog();
+        }
+        private void addNewPaymentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddEditPayment frm = new frmAddEditPayment();
+
+            frm.ShowDialog();
+
+            frmListPayments_Load(null,null);
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int PaymentID = (int)dgvPayments.CurrentRow.Cells[0].Value;
+            frmAddEditPayment frm = new frmAddEditPayment(PaymentID);
+
+            frm.ShowDialog();
+
+            frmListPayments_Load(null, null);
+        }
+
     }
 }
