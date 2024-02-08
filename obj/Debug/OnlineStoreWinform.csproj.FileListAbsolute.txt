@@ -31,3 +31,4 @@ C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.Order
 C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.Payments.frmListPayments.resources
 C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.Payments.frmAddEditPayment.resources
 C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.Shippings.frmListShippings.resources
+C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.Shippings.frmAddEditShipping.resources

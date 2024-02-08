@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tbPaymentInfo = new System.Windows.Forms.TabControl();
             this.tpOrderInfo = new System.Windows.Forms.TabPage();
+            this.ctrlShowOrderDetailsWithFilter1 = new OnlineStoreWinform.Orders.Controls.ctrlShowOrderDetailsWithFilter();
             this.btnNext = new System.Windows.Forms.Button();
             this.tpPaymentInfo = new System.Windows.Forms.TabPage();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cbPaymentMethod = new System.Windows.Forms.ComboBox();
+            this.txtAmount = new System.Windows.Forms.TextBox();
             this.lblPaymentID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -39,14 +44,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.txtAmount = new System.Windows.Forms.TextBox();
-            this.cbPaymentMethod = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.ctrlShowOrderDetailsWithFilter1 = new OnlineStoreWinform.Orders.Controls.ctrlShowOrderDetailsWithFilter();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tbPaymentInfo.SuspendLayout();
             this.tpOrderInfo.SuspendLayout();
             this.tpPaymentInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tbPaymentInfo
@@ -70,6 +73,14 @@
             this.tpOrderInfo.TabIndex = 0;
             this.tpOrderInfo.Text = "OrderInfo";
             this.tpOrderInfo.UseVisualStyleBackColor = true;
+            // 
+            // ctrlShowOrderDetailsWithFilter1
+            // 
+            this.ctrlShowOrderDetailsWithFilter1.FilterEnabled = true;
+            this.ctrlShowOrderDetailsWithFilter1.Location = new System.Drawing.Point(0, 0);
+            this.ctrlShowOrderDetailsWithFilter1.Name = "ctrlShowOrderDetailsWithFilter1";
+            this.ctrlShowOrderDetailsWithFilter1.Size = new System.Drawing.Size(616, 394);
+            this.ctrlShowOrderDetailsWithFilter1.TabIndex = 22;
             // 
             // btnNext
             // 
@@ -98,6 +109,33 @@
             this.tpPaymentInfo.TabIndex = 1;
             this.tpPaymentInfo.Text = "PaymentInfo";
             this.tpPaymentInfo.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(250, 261);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 17;
+            // 
+            // cbPaymentMethod
+            // 
+            this.cbPaymentMethod.FormattingEnabled = true;
+            this.cbPaymentMethod.Items.AddRange(new object[] {
+            "Cash",
+            "Visa",
+            "Master Card"});
+            this.cbPaymentMethod.Location = new System.Drawing.Point(250, 207);
+            this.cbPaymentMethod.Name = "cbPaymentMethod";
+            this.cbPaymentMethod.Size = new System.Drawing.Size(200, 24);
+            this.cbPaymentMethod.TabIndex = 16;
+            // 
+            // txtAmount
+            // 
+            this.txtAmount.Location = new System.Drawing.Point(250, 159);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(200, 22);
+            this.txtAmount.TabIndex = 15;
+            this.txtAmount.Validating += new System.ComponentModel.CancelEventHandler(this.txtAmount_Validating);
             // 
             // lblPaymentID
             // 
@@ -175,32 +213,6 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // txtAmount
-            // 
-            this.txtAmount.Location = new System.Drawing.Point(250, 159);
-            this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(200, 22);
-            this.txtAmount.TabIndex = 15;
-            // 
-            // cbPaymentMethod
-            // 
-            this.cbPaymentMethod.FormattingEnabled = true;
-            this.cbPaymentMethod.Items.AddRange(new object[] {
-            "Cash",
-            "Visa",
-            "Master Card"});
-            this.cbPaymentMethod.Location = new System.Drawing.Point(250, 207);
-            this.cbPaymentMethod.Name = "cbPaymentMethod";
-            this.cbPaymentMethod.Size = new System.Drawing.Size(200, 24);
-            this.cbPaymentMethod.TabIndex = 16;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(250, 261);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 17;
-            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
@@ -212,13 +224,9 @@
             this.lblTitle.TabIndex = 23;
             this.lblTitle.Text = "Add New Payment";
             // 
-            // ctrlShowOrderDetailsWithFilter1
+            // errorProvider1
             // 
-            this.ctrlShowOrderDetailsWithFilter1.FilterEnabled = true;
-            this.ctrlShowOrderDetailsWithFilter1.Location = new System.Drawing.Point(0, 0);
-            this.ctrlShowOrderDetailsWithFilter1.Name = "ctrlShowOrderDetailsWithFilter1";
-            this.ctrlShowOrderDetailsWithFilter1.Size = new System.Drawing.Size(616, 394);
-            this.ctrlShowOrderDetailsWithFilter1.TabIndex = 22;
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmAddEditPayment
             // 
@@ -236,6 +244,7 @@
             this.tpOrderInfo.ResumeLayout(false);
             this.tpPaymentInfo.ResumeLayout(false);
             this.tpPaymentInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,5 +268,6 @@
         private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

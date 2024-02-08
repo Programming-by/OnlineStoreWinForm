@@ -62,6 +62,8 @@ namespace OnlineStoreWinform.Customers
             frmShowCustomerDetails frm = new frmShowCustomerDetails(((int)dgvCustomers.CurrentRow.Cells[0].Value));
 
             frm.ShowDialog();
+            FrmListCustomers_Load(null, null);
+
         }
 
         private void addNewCustomerToolStripMenuItem_Click(object sender, EventArgs e)

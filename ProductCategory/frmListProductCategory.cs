@@ -40,6 +40,9 @@ namespace OnlineStoreWinform.ProductCategory
             frmAddEditProductCategory frm = new frmAddEditProductCategory();
 
             frm.ShowDialog();
+
+            frmListProductCategory_Load(null, null);
+
         }
 
         private void addNewCategoryToolStripMenuItem_Click(object sender, EventArgs e)

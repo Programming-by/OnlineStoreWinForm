@@ -51,17 +51,27 @@ namespace OnlineStoreWinform.Shippings
         }
         private void btnAddNewShipping_Click(object sender, EventArgs e)
         {
-          
+            frmAddEditShipping frm = new frmAddEditShipping();
+
+            frm.ShowDialog();
+            frmListShippings_Load(null,null);
         }
 
-        private void addNewPaymentToolStripMenuItem_Click(object sender, EventArgs e)
+        private void addNewShippingToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmAddEditShipping frm = new frmAddEditShipping();
 
+            frm.ShowDialog();
+
+            frmListShippings_Load(null,null);
         }
-
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmAddEditShipping frm = new frmAddEditShipping((int)dgvShipping.CurrentRow.Cells[0].Value);
 
+            frm.ShowDialog();
+
+            frmListShippings_Load(null, null);
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -78,5 +88,6 @@ namespace OnlineStoreWinform.Shippings
             else
                 MessageBox.Show("Shipping Failed to Delete");
         }
+
     }
 }

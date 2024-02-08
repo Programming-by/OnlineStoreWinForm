@@ -32,7 +32,7 @@
             this.dgvShipping = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showCustomerDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addNewPaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addNewShippingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,7 +62,7 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showCustomerDetailsToolStripMenuItem,
-            this.addNewPaymentToolStripMenuItem,
+            this.addNewShippingToolStripMenuItem,
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
@@ -74,12 +74,12 @@
             this.showCustomerDetailsToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
             this.showCustomerDetailsToolStripMenuItem.Text = "Show Shippings Details";
             // 
-            // addNewPaymentToolStripMenuItem
+            // addNewShippingToolStripMenuItem
             // 
-            this.addNewPaymentToolStripMenuItem.Name = "addNewPaymentToolStripMenuItem";
-            this.addNewPaymentToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
-            this.addNewPaymentToolStripMenuItem.Text = "Add New Shipping";
-            this.addNewPaymentToolStripMenuItem.Click += new System.EventHandler(this.addNewPaymentToolStripMenuItem_Click);
+            this.addNewShippingToolStripMenuItem.Name = "addNewShippingToolStripMenuItem";
+            this.addNewShippingToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
+            this.addNewShippingToolStripMenuItem.Text = "Add New Shipping";
+            this.addNewShippingToolStripMenuItem.Click += new System.EventHandler(this.addNewShippingToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -163,7 +163,7 @@
         private System.Windows.Forms.DataGridView dgvShipping;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem showCustomerDetailsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addNewPaymentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addNewShippingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.Label label1;

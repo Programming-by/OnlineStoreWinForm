@@ -64,6 +64,8 @@ namespace OnlineStoreWinform.Payments
             frmAddEditPayment frm = new frmAddEditPayment();
 
             frm.ShowDialog();
+            frmListPayments_Load(null, null);
+
         }
         private void addNewPaymentToolStripMenuItem_Click(object sender, EventArgs e)
         {

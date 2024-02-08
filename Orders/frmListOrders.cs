@@ -52,6 +52,9 @@ namespace OnlineStoreWinform.Orders
             frmAddEditOrder frm = new frmAddEditOrder();
 
             frm.ShowDialog();
+
+            frmListOrders_Load(null, null);
+
         }
 
         private void showOrderDetailsToolStripMenuItem_Click(object sender, EventArgs e)

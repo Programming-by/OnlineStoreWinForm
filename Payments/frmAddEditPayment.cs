@@ -111,5 +111,15 @@ namespace OnlineStoreWinform.Payments
                 MessageBox.Show("Data Failed to Save", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
+        private void txtAmount_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtAmount.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtAmount, "this field is required");
+            } else
+                errorProvider1.SetError(txtAmount, "");
+
+        }
     }
 }
