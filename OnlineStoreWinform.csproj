@@ -104,6 +104,12 @@
     <Compile Include="Orders\Controls\ctrlShowOrderDetails.Designer.cs">
       <DependentUpon>ctrlShowOrderDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Orders\frmAddEditOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\frmAddEditOrder.Designer.cs">
+      <DependentUpon>frmAddEditOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Orders\frmListOrders.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Orders\Controls\ctrlShowOrderDetails.resx">
       <DependentUpon>ctrlShowOrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\frmAddEditOrder.resx">
+      <DependentUpon>frmAddEditOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Orders\frmListOrders.resx">
       <DependentUpon>frmListOrders.cs</DependentUpon>

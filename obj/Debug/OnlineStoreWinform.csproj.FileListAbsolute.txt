@@ -26,3 +26,4 @@ C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.Custo
 C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.Orders.frmListOrders.resources
 C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.Orders.Controls.ctrlShowOrderDetails.resources
 C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.Orders.frmShowOrderDetails.resources
+C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.Orders.frmAddEditOrder.resources
