@@ -1,6 +1,6 @@
-﻿namespace OnlineStoreWinform.Payments
+﻿namespace OnlineStoreWinform.Shippings
 {
-    partial class frmListPayments
+    partial class frmListShippings
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dgvPayments = new System.Windows.Forms.DataGridView();
+            this.dgvShipping = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showCustomerDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewPaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,26 +37,25 @@
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblPaymentCount = new System.Windows.Forms.Label();
-            this.btnAddNewPayment = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).BeginInit();
+            this.lblShippingCount = new System.Windows.Forms.Label();
+            this.btnAddNewShipping = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvShipping)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvPayments
+            // dgvShipping
             // 
-            this.dgvPayments.AllowUserToAddRows = false;
-            this.dgvPayments.AllowUserToDeleteRows = false;
-            this.dgvPayments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPayments.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvPayments.Location = new System.Drawing.Point(10, 136);
-            this.dgvPayments.Name = "dgvPayments";
-            this.dgvPayments.ReadOnly = true;
-            this.dgvPayments.RowHeadersWidth = 51;
-            this.dgvPayments.RowTemplate.Height = 24;
-            this.dgvPayments.Size = new System.Drawing.Size(706, 242);
-            this.dgvPayments.TabIndex = 7;
+            this.dgvShipping.AllowUserToAddRows = false;
+            this.dgvShipping.AllowUserToDeleteRows = false;
+            this.dgvShipping.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvShipping.ContextMenuStrip = this.contextMenuStrip1;
+            this.dgvShipping.Location = new System.Drawing.Point(17, 132);
+            this.dgvShipping.Name = "dgvShipping";
+            this.dgvShipping.ReadOnly = true;
+            this.dgvShipping.RowHeadersWidth = 51;
+            this.dgvShipping.RowTemplate.Height = 24;
+            this.dgvShipping.Size = new System.Drawing.Size(706, 242);
+            this.dgvShipping.TabIndex = 12;
             // 
             // contextMenuStrip1
             // 
@@ -67,32 +66,32 @@
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(225, 100);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(234, 128);
             // 
             // showCustomerDetailsToolStripMenuItem
             // 
             this.showCustomerDetailsToolStripMenuItem.Name = "showCustomerDetailsToolStripMenuItem";
-            this.showCustomerDetailsToolStripMenuItem.Size = new System.Drawing.Size(224, 24);
-            this.showCustomerDetailsToolStripMenuItem.Text = "Show Payment Details";
+            this.showCustomerDetailsToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
+            this.showCustomerDetailsToolStripMenuItem.Text = "Show Shippings Details";
             // 
             // addNewPaymentToolStripMenuItem
             // 
             this.addNewPaymentToolStripMenuItem.Name = "addNewPaymentToolStripMenuItem";
-            this.addNewPaymentToolStripMenuItem.Size = new System.Drawing.Size(224, 24);
-            this.addNewPaymentToolStripMenuItem.Text = "Add New Payment";
+            this.addNewPaymentToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
+            this.addNewPaymentToolStripMenuItem.Text = "Add New Shipping";
             this.addNewPaymentToolStripMenuItem.Click += new System.EventHandler(this.addNewPaymentToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(224, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(224, 24);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -101,69 +100,58 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(233, 31);
+            this.label1.Location = new System.Drawing.Point(240, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(176, 25);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Manage Payments";
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Manage Shippings";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(14, 394);
+            this.label2.Location = new System.Drawing.Point(21, 390);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 25);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Payments Count";
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Shippings Count";
             // 
-            // lblPaymentCount
+            // lblShippingCount
             // 
-            this.lblPaymentCount.AutoSize = true;
-            this.lblPaymentCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaymentCount.ForeColor = System.Drawing.Color.Navy;
-            this.lblPaymentCount.Location = new System.Drawing.Point(195, 394);
-            this.lblPaymentCount.Name = "lblPaymentCount";
-            this.lblPaymentCount.Size = new System.Drawing.Size(45, 25);
-            this.lblPaymentCount.TabIndex = 9;
-            this.lblPaymentCount.Text = "???";
+            this.lblShippingCount.AutoSize = true;
+            this.lblShippingCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShippingCount.ForeColor = System.Drawing.Color.Navy;
+            this.lblShippingCount.Location = new System.Drawing.Point(202, 390);
+            this.lblShippingCount.Name = "lblShippingCount";
+            this.lblShippingCount.Size = new System.Drawing.Size(45, 25);
+            this.lblShippingCount.TabIndex = 14;
+            this.lblShippingCount.Text = "???";
             // 
-            // btnAddNewPayment
+            // btnAddNewShipping
             // 
-            this.btnAddNewPayment.Location = new System.Drawing.Point(641, 55);
-            this.btnAddNewPayment.Name = "btnAddNewPayment";
-            this.btnAddNewPayment.Size = new System.Drawing.Size(75, 60);
-            this.btnAddNewPayment.TabIndex = 8;
-            this.btnAddNewPayment.Text = "Add";
-            this.btnAddNewPayment.UseVisualStyleBackColor = true;
-            this.btnAddNewPayment.Click += new System.EventHandler(this.btnAddNewPayment_Click);
+            this.btnAddNewShipping.Location = new System.Drawing.Point(648, 51);
+            this.btnAddNewShipping.Name = "btnAddNewShipping";
+            this.btnAddNewShipping.Size = new System.Drawing.Size(75, 60);
+            this.btnAddNewShipping.TabIndex = 13;
+            this.btnAddNewShipping.Text = "Add";
+            this.btnAddNewShipping.UseVisualStyleBackColor = true;
+            this.btnAddNewShipping.Click += new System.EventHandler(this.btnAddNewShipping_Click);
             // 
-            // btnClose
-            // 
-            this.btnClose.Location = new System.Drawing.Point(599, 394);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(117, 60);
-            this.btnClose.TabIndex = 11;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // frmListPayments
+            // frmListShippings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 450);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.dgvPayments);
+            this.ClientSize = new System.Drawing.Size(754, 509);
+            this.Controls.Add(this.dgvShipping);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblPaymentCount);
-            this.Controls.Add(this.btnAddNewPayment);
-            this.Name = "frmListPayments";
-            this.Text = "frmListPayments";
-            this.Load += new System.EventHandler(this.frmListPayments_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).EndInit();
+            this.Controls.Add(this.lblShippingCount);
+            this.Controls.Add(this.btnAddNewShipping);
+            this.Name = "frmListShippings";
+            this.Text = "frmListShippings";
+            this.Load += new System.EventHandler(this.frmListShippings_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvShipping)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -172,7 +160,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvPayments;
+        private System.Windows.Forms.DataGridView dgvShipping;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem showCustomerDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewPaymentToolStripMenuItem;
@@ -180,8 +168,7 @@
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblPaymentCount;
-        private System.Windows.Forms.Button btnAddNewPayment;
-        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label lblShippingCount;
+        private System.Windows.Forms.Button btnAddNewShipping;
     }
 }
