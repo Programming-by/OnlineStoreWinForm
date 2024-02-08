@@ -22,6 +22,18 @@ namespace OnlineStoreWinform.Customers.Controls
             get { return ctrlShowCustomersDetails1.SelectedCustomerInfo; }
         }
 
+        private bool _FilterEnabled = true;
+
+        public bool FilterEnabled
+        {
+            get { return _FilterEnabled; }
+            set { 
+                _FilterEnabled = value;
+                gbFilter.Enabled = _FilterEnabled;
+            
+            }
+        }
+
         public int? CustomerID
         {
             get { return ctrlShowCustomersDetails1.CustomerID; } 
@@ -53,6 +65,12 @@ namespace OnlineStoreWinform.Customers.Controls
 
             frm.DataBack += frm_DataBack;
             frm.ShowDialog();
+        }
+
+        public void LoadCustomerInfo(int? CustomerID)
+        {
+            txtCustomerID.Text = CustomerID.ToString();
+            ctrlShowCustomersDetails1.LoadCustomerInfo(CustomerID);
         }
     }
 }

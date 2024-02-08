@@ -55,6 +55,23 @@ namespace OnlineStoreWinform.Orders
 
         private void _LoadData()
         {
+            _Order = clsOrder.Find(_OrderID);
+
+            if (_Order == null)
+            {
+                MessageBox.Show("Order is not found","Failed",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+            ctrlShowCustomerDetailsWithFilter1.FilterEnabled = false;
+            lblOrderID.Text = _Order.OrderID.ToString();
+            ctrlShowCustomerDetailsWithFilter1.LoadCustomerInfo(_Order.CustomerID);
+            if (_Order.OrderDate > DateTime.Now)
+            dateTimePicker1.Value = (DateTime) _Order.OrderDate;
+            else
+            dateTimePicker1.Value = DateTime.Now;
+
+            txtTotalAmount.Text = _Order.TotalAmount.ToString();
+            lblStatus.Text = _Order.Status.ToString();
 
         }
         private void frmAddEditOrder_Load(object sender, EventArgs e)
