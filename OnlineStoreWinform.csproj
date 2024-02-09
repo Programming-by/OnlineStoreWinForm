@@ -140,11 +140,23 @@
     <Compile Include="Payments\frmListPayments.Designer.cs">
       <DependentUpon>frmListPayments.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductCatalog\frmAddEditProductCatalog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog\frmAddEditProductCatalog.Designer.cs">
+      <DependentUpon>frmAddEditProductCatalog.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductCatalog\frmListProductCatlog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ProductCatalog\frmListProductCatlog.Designer.cs">
       <DependentUpon>frmListProductCatlog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCategory\Controls\ctrlCategoryDetailsWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProductCategory\Controls\ctrlCategoryDetailsWithFilter.Designer.cs">
+      <DependentUpon>ctrlCategoryDetailsWithFilter.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductCategory\frmAddEditProductCategory.cs">
       <SubType>Form</SubType>
@@ -217,8 +229,14 @@
     <EmbeddedResource Include="Payments\frmListPayments.resx">
       <DependentUpon>frmListPayments.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProductCatalog\frmAddEditProductCatalog.resx">
+      <DependentUpon>frmAddEditProductCatalog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProductCatalog\frmListProductCatlog.resx">
       <DependentUpon>frmListProductCatlog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductCategory\Controls\ctrlCategoryDetailsWithFilter.resx">
+      <DependentUpon>ctrlCategoryDetailsWithFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductCategory\frmAddEditProductCategory.resx">
       <DependentUpon>frmAddEditProductCategory.cs</DependentUpon>

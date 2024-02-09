@@ -23,6 +23,9 @@ namespace OnlineStoreWinform.ProductCategory
             InitializeComponent();
         }
 
+        public delegate void DataBackHandler(object sender, int? CategoryID);
+
+        public event DataBackHandler DataBack;
         public frmAddEditProductCategory(int CategoryID)
         {
             InitializeComponent();
@@ -90,6 +93,7 @@ namespace OnlineStoreWinform.ProductCategory
             if (_ProductCategory.Save())
             {
                 Mode = enMode.Update;
+                DataBack?.Invoke(this,_ProductCategory.CategoryID);
                 lblCategoryID.Text = _ProductCategory.CategoryID.ToString();
                 MessageBox.Show("Data Saved Successfully","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
             } else

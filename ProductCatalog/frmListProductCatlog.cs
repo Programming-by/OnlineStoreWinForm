@@ -72,5 +72,32 @@ namespace OnlineStoreWinform.ProductCatalog
             else
                 MessageBox.Show("Product Catalog Failed to Delete");
         }
+
+        private void addNewProductCatalogToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddEditProductCatalog frm = new frmAddEditProductCatalog();
+
+            frm.ShowDialog();
+
+            frmListProductCatlog_Load(null, null);
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddEditProductCatalog frm = new frmAddEditProductCatalog((int)dgvProductCatalog.CurrentRow.Cells[0].Value);
+
+            frm.ShowDialog();
+
+            frmListProductCatlog_Load(null, null);
+        }
+
+        private void btnAddNewProductCatalog_Click(object sender, EventArgs e)
+        {
+            frmAddEditProductCatalog frm = new frmAddEditProductCatalog();
+
+            frm.ShowDialog();
+
+            frmListProductCatlog_Load(null, null);
+        }
     }
 }

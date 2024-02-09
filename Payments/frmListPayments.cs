@@ -90,5 +90,6 @@ namespace OnlineStoreWinform.Payments
         {
             this.Close();
         }
+
     }
 }

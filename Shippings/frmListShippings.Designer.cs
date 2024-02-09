@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.dgvShipping = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.showCustomerDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewShippingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,18 +60,11 @@
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showCustomerDetailsToolStripMenuItem,
             this.addNewShippingToolStripMenuItem,
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(234, 128);
-            // 
-            // showCustomerDetailsToolStripMenuItem
-            // 
-            this.showCustomerDetailsToolStripMenuItem.Name = "showCustomerDetailsToolStripMenuItem";
-            this.showCustomerDetailsToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
-            this.showCustomerDetailsToolStripMenuItem.Text = "Show Shippings Details";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 104);
             // 
             // addNewShippingToolStripMenuItem
             // 
@@ -162,7 +154,6 @@
 
         private System.Windows.Forms.DataGridView dgvShipping;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem showCustomerDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewShippingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
