@@ -35,6 +35,7 @@
             this.categoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shippingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productCatalogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +71,8 @@
             // productsToolStripMenuItem
             // 
             this.productsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.categoriesToolStripMenuItem});
+            this.categoriesToolStripMenuItem,
+            this.productCatalogToolStripMenuItem});
             this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
             this.productsToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
             this.productsToolStripMenuItem.Text = "Products";
@@ -78,7 +80,7 @@
             // categoriesToolStripMenuItem
             // 
             this.categoriesToolStripMenuItem.Name = "categoriesToolStripMenuItem";
-            this.categoriesToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
+            this.categoriesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.categoriesToolStripMenuItem.Text = "Categories";
             this.categoriesToolStripMenuItem.Click += new System.EventHandler(this.categoriesToolStripMenuItem_Click);
             // 
@@ -95,6 +97,13 @@
             this.shippingsToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
             this.shippingsToolStripMenuItem.Text = "Shippings";
             this.shippingsToolStripMenuItem.Click += new System.EventHandler(this.shippingsToolStripMenuItem_Click);
+            // 
+            // productCatalogToolStripMenuItem
+            // 
+            this.productCatalogToolStripMenuItem.Name = "productCatalogToolStripMenuItem";
+            this.productCatalogToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.productCatalogToolStripMenuItem.Text = "Product Catalog";
+            this.productCatalogToolStripMenuItem.Click += new System.EventHandler(this.productCatalogToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -121,5 +130,6 @@
         private System.Windows.Forms.ToolStripMenuItem categoriesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paymentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem shippingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productCatalogToolStripMenuItem;
     }
 }

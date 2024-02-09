@@ -1,6 +1,7 @@
 ﻿using OnlineStoreWinform.Customers;
 using OnlineStoreWinform.Orders;
 using OnlineStoreWinform.Payments;
+using OnlineStoreWinform.ProductCatalog;
 using OnlineStoreWinform.ProductCategory;
 using OnlineStoreWinform.Shippings;
 using System;
@@ -53,6 +54,13 @@ namespace OnlineStoreWinform
         private void shippingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListShippings frm = new frmListShippings();
+
+            frm.ShowDialog();
+        }
+
+        private void productCatalogToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListProductCatlog frm = new frmListProductCatlog();
 
             frm.ShowDialog();
         }
