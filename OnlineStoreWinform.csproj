@@ -98,6 +98,12 @@
     <Compile Include="Login\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrderItems\frmListOrderItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderItems\frmListOrderItems.Designer.cs">
+      <DependentUpon>frmListOrderItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="Orders\Controls\ctrlShowOrderDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -249,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderItems\frmListOrderItems.resx">
+      <DependentUpon>frmListOrderItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Orders\Controls\ctrlShowOrderDetails.resx">
       <DependentUpon>ctrlShowOrderDetails.cs</DependentUpon>
