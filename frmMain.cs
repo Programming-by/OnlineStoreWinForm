@@ -3,6 +3,7 @@ using OnlineStoreWinform.Orders;
 using OnlineStoreWinform.Payments;
 using OnlineStoreWinform.ProductCatalog;
 using OnlineStoreWinform.ProductCategory;
+using OnlineStoreWinform.ProductImages;
 using OnlineStoreWinform.Shippings;
 using System;
 using System.Collections.Generic;
@@ -61,6 +62,13 @@ namespace OnlineStoreWinform
         private void productCatalogToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListProductCatlog frm = new frmListProductCatlog();
+
+            frm.ShowDialog();
+        }
+
+        private void productImagesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListProductImages frm = new frmListProductImages();
 
             frm.ShowDialog();
         }

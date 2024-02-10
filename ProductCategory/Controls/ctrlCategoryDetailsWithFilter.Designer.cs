@@ -33,12 +33,9 @@
             this.txtCategoryID = new System.Windows.Forms.TextBox();
             this.btnFind = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblCategoryName = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblCategoryID = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ctrlCategoryDetails1 = new OnlineStoreWinform.ProductCategory.Controls.ctrlCategoryDetails();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -60,8 +57,6 @@
             this.txtCategoryID.Name = "txtCategoryID";
             this.txtCategoryID.Size = new System.Drawing.Size(207, 22);
             this.txtCategoryID.TabIndex = 8;
-            this.txtCategoryID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCategoryID_KeyPress);
-            this.txtCategoryID.Validating += new System.ComponentModel.CancelEventHandler(this.txtCategoryID_Validating);
             // 
             // btnFind
             // 
@@ -83,53 +78,9 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(9, 121);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 20);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "CategoryName:";
-            // 
-            // lblCategoryName
-            // 
-            this.lblCategoryName.AutoSize = true;
-            this.lblCategoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoryName.ForeColor = System.Drawing.Color.Navy;
-            this.lblCategoryName.Location = new System.Drawing.Point(168, 121);
-            this.lblCategoryName.Name = "lblCategoryName";
-            this.lblCategoryName.Size = new System.Drawing.Size(36, 20);
-            this.lblCategoryName.TabIndex = 12;
-            this.lblCategoryName.Text = "???";
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(9, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 20);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "CategoryID:";
-            // 
-            // lblCategoryID
-            // 
-            this.lblCategoryID.AutoSize = true;
-            this.lblCategoryID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoryID.ForeColor = System.Drawing.Color.Navy;
-            this.lblCategoryID.Location = new System.Drawing.Point(168, 82);
-            this.lblCategoryID.Name = "lblCategoryID";
-            this.lblCategoryID.Size = new System.Drawing.Size(36, 20);
-            this.lblCategoryID.TabIndex = 14;
-            this.lblCategoryID.Text = "???";
             // 
             // groupBox1
             // 
@@ -142,24 +93,28 @@
             this.groupBox1.Size = new System.Drawing.Size(505, 70);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Filter";
+            // 
+            // ctrlCategoryDetails1
+            // 
+            this.ctrlCategoryDetails1.Location = new System.Drawing.Point(13, 85);
+            this.ctrlCategoryDetails1.Name = "ctrlCategoryDetails1";
+            this.ctrlCategoryDetails1.SelectedCategoryInfo = null;
+            this.ctrlCategoryDetails1.Size = new System.Drawing.Size(295, 128);
+            this.ctrlCategoryDetails1.TabIndex = 16;
             // 
             // ctrlCategoryDetailsWithFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblCategoryName);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblCategoryID);
+            this.Controls.Add(this.ctrlCategoryDetails1);
             this.Controls.Add(this.groupBox1);
             this.Name = "ctrlCategoryDetailsWithFilter";
-            this.Size = new System.Drawing.Size(540, 145);
+            this.Size = new System.Drawing.Size(540, 211);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -169,11 +124,8 @@
         private System.Windows.Forms.TextBox txtCategoryID;
         private System.Windows.Forms.Button btnFind;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblCategoryName;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Label lblCategoryID;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
+        private Controls.ctrlCategoryDetails ctrlCategoryDetails1;
     }
 }

@@ -26,6 +26,10 @@ namespace OnlineStoreWinform.ProductCatalog
         int _ProductID;
 
         clsProductCatalog _Product;
+
+        public delegate void DatabackHandler(object sender, int? ProductID);
+
+        public event DatabackHandler DataBack;
         public frmAddEditProductCatalog(int ProductID)
         {
             InitializeComponent();
@@ -126,6 +130,7 @@ namespace OnlineStoreWinform.ProductCatalog
             if (_Product.Save())
             {
                 Mode = enMode.Update;
+                DataBack?.Invoke(this,_Product.ProductID);
                 lblProductID.Text = _Product.ProductID.ToString();
                 MessageBox.Show("Data Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

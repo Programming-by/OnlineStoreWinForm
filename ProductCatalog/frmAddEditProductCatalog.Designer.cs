@@ -270,7 +270,7 @@
             this.ctrlCategoryDetailsWithFilter1.FilterEnabled = true;
             this.ctrlCategoryDetailsWithFilter1.Location = new System.Drawing.Point(40, 87);
             this.ctrlCategoryDetailsWithFilter1.Name = "ctrlCategoryDetailsWithFilter1";
-            this.ctrlCategoryDetailsWithFilter1.Size = new System.Drawing.Size(540, 170);
+            this.ctrlCategoryDetailsWithFilter1.Size = new System.Drawing.Size(540, 237);
             this.ctrlCategoryDetailsWithFilter1.TabIndex = 22;
             // 
             // frmAddEditProductCatalog

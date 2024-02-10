@@ -140,6 +140,18 @@
     <Compile Include="Payments\frmListPayments.Designer.cs">
       <DependentUpon>frmListPayments.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductCatalog\Controls\ctrlProductDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog\Controls\ctrlProductDetails.Designer.cs">
+      <DependentUpon>ctrlProductDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog\Controls\ctrlProductDetailsWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog\Controls\ctrlProductDetailsWithFilter.Designer.cs">
+      <DependentUpon>ctrlProductDetailsWithFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductCatalog\frmAddEditProductCatalog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +163,12 @@
     </Compile>
     <Compile Include="ProductCatalog\frmListProductCatlog.Designer.cs">
       <DependentUpon>frmListProductCatlog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCategory\Controls\ctrlCategoryDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProductCategory\Controls\ctrlCategoryDetails.Designer.cs">
+      <DependentUpon>ctrlCategoryDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductCategory\Controls\ctrlCategoryDetailsWithFilter.cs">
       <SubType>UserControl</SubType>
@@ -169,6 +187,18 @@
     </Compile>
     <Compile Include="ProductCategory\frmListProductCategory.Designer.cs">
       <DependentUpon>frmListProductCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductImages\frmAddEditProductImages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductImages\frmAddEditProductImages.Designer.cs">
+      <DependentUpon>frmAddEditProductImages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductImages\frmListProductImages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductImages\frmListProductImages.Designer.cs">
+      <DependentUpon>frmListProductImages.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -229,11 +259,20 @@
     <EmbeddedResource Include="Payments\frmListPayments.resx">
       <DependentUpon>frmListPayments.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProductCatalog\Controls\ctrlProductDetails.resx">
+      <DependentUpon>ctrlProductDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductCatalog\Controls\ctrlProductDetailsWithFilter.resx">
+      <DependentUpon>ctrlProductDetailsWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProductCatalog\frmAddEditProductCatalog.resx">
       <DependentUpon>frmAddEditProductCatalog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductCatalog\frmListProductCatlog.resx">
       <DependentUpon>frmListProductCatlog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductCategory\Controls\ctrlCategoryDetails.resx">
+      <DependentUpon>ctrlCategoryDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductCategory\Controls\ctrlCategoryDetailsWithFilter.resx">
       <DependentUpon>ctrlCategoryDetailsWithFilter.cs</DependentUpon>
@@ -243,6 +282,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProductCategory\frmListProductCategory.resx">
       <DependentUpon>frmListProductCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductImages\frmAddEditProductImages.resx">
+      <DependentUpon>frmAddEditProductImages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductImages\frmListProductImages.resx">
+      <DependentUpon>frmListProductImages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
