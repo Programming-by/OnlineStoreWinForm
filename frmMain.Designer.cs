@@ -34,9 +34,10 @@
             this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productCatalogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productImagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shippingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productImagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reviewsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +75,8 @@
             this.productsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.categoriesToolStripMenuItem,
             this.productCatalogToolStripMenuItem,
-            this.productImagesToolStripMenuItem});
+            this.productImagesToolStripMenuItem,
+            this.reviewsToolStripMenuItem});
             this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
             this.productsToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
             this.productsToolStripMenuItem.Text = "Products";
@@ -93,6 +95,13 @@
             this.productCatalogToolStripMenuItem.Text = "Product Catalog";
             this.productCatalogToolStripMenuItem.Click += new System.EventHandler(this.productCatalogToolStripMenuItem_Click);
             // 
+            // productImagesToolStripMenuItem
+            // 
+            this.productImagesToolStripMenuItem.Name = "productImagesToolStripMenuItem";
+            this.productImagesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.productImagesToolStripMenuItem.Text = "Product Images";
+            this.productImagesToolStripMenuItem.Click += new System.EventHandler(this.productImagesToolStripMenuItem_Click);
+            // 
             // paymentsToolStripMenuItem
             // 
             this.paymentsToolStripMenuItem.Name = "paymentsToolStripMenuItem";
@@ -107,12 +116,12 @@
             this.shippingsToolStripMenuItem.Text = "Shippings";
             this.shippingsToolStripMenuItem.Click += new System.EventHandler(this.shippingsToolStripMenuItem_Click);
             // 
-            // productImagesToolStripMenuItem
+            // reviewsToolStripMenuItem
             // 
-            this.productImagesToolStripMenuItem.Name = "productImagesToolStripMenuItem";
-            this.productImagesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.productImagesToolStripMenuItem.Text = "Product Images";
-            this.productImagesToolStripMenuItem.Click += new System.EventHandler(this.productImagesToolStripMenuItem_Click);
+            this.reviewsToolStripMenuItem.Name = "reviewsToolStripMenuItem";
+            this.reviewsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.reviewsToolStripMenuItem.Text = "Reviews";
+            this.reviewsToolStripMenuItem.Click += new System.EventHandler(this.reviewsToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -141,5 +150,6 @@
         private System.Windows.Forms.ToolStripMenuItem shippingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productCatalogToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productImagesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reviewsToolStripMenuItem;
     }
 }

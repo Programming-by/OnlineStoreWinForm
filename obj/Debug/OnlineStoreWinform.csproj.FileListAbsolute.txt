@@ -40,3 +40,5 @@ C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.Produ
 C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.ProductCatalog.Controls.ctrlProductDetails.resources
 C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.ProductCatalog.Controls.ctrlProductDetailsWithFilter.resources
 C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.ProductImages.frmAddEditProductImages.resources
+C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.Reviews.frmListReviews.resources
+C:\Users\User\Source\Repos\OnlineStoreWinform\obj\Debug\OnlineStoreWinform.Reviews.frmAddEditReview.resources
