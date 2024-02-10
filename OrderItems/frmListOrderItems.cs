@@ -64,16 +64,28 @@ namespace OnlineStoreWinform.OrderItems
         }
         private void btnAddNewOrderItem_Click(object sender, EventArgs e)
         {
+            frmAddEditOrderItem frm = new frmAddEditOrderItem();
 
+            frm.ShowDialog();
+
+            frmListOrderItems_Load(null, null); 
         }
         private void addNewOrderItemToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmAddEditOrderItem frm = new frmAddEditOrderItem();
 
+            frm.ShowDialog();
+
+            frmListOrderItems_Load(null, null);
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmAddEditOrderItem frm = new frmAddEditOrderItem((int)dgvOrderItems.CurrentRow.Cells[0].Value);
 
+            frm.ShowDialog();
+
+            frmListOrderItems_Load(null, null);
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)

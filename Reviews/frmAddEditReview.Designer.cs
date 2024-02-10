@@ -31,8 +31,13 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.tbReviewInfo = new System.Windows.Forms.TabControl();
             this.tpProductInfo = new System.Windows.Forms.TabPage();
+            this.ctrlProductDetailsWithFilter1 = new OnlineStoreWinform.ProductCatalog.Controls.ctrlProductDetailsWithFilter();
             this.btnNextToCustomersInfo = new System.Windows.Forms.Button();
+            this.tpCustomerInfo = new System.Windows.Forms.TabPage();
+            this.ctrlShowCustomerDetailsWithFilter1 = new OnlineStoreWinform.Customers.Controls.ctrlShowCustomerDetailsWithFilter();
+            this.btnNextToReviewInfo = new System.Windows.Forms.Button();
             this.tpReviewInfo = new System.Windows.Forms.TabPage();
+            this.numericUpDownRating = new System.Windows.Forms.NumericUpDown();
             this.dateTimePickerReviewDate = new System.Windows.Forms.DateTimePicker();
             this.txtReviewText = new System.Windows.Forms.TextBox();
             this.lblReviewID = new System.Windows.Forms.Label();
@@ -42,15 +47,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.tpCustomerInfo = new System.Windows.Forms.TabPage();
-            this.btnNextToReviewInfo = new System.Windows.Forms.Button();
-            this.numericUpDownRating = new System.Windows.Forms.NumericUpDown();
-            this.ctrlProductDetailsWithFilter1 = new OnlineStoreWinform.ProductCatalog.Controls.ctrlProductDetailsWithFilter();
-            this.ctrlShowCustomerDetailsWithFilter1 = new OnlineStoreWinform.Customers.Controls.ctrlShowCustomerDetailsWithFilter();
             this.tbReviewInfo.SuspendLayout();
             this.tpProductInfo.SuspendLayout();
-            this.tpReviewInfo.SuspendLayout();
             this.tpCustomerInfo.SuspendLayout();
+            this.tpReviewInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRating)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,6 +88,14 @@
             this.tpProductInfo.Text = "ProductInfo";
             this.tpProductInfo.UseVisualStyleBackColor = true;
             // 
+            // ctrlProductDetailsWithFilter1
+            // 
+            this.ctrlProductDetailsWithFilter1.FilterEnabled = true;
+            this.ctrlProductDetailsWithFilter1.Location = new System.Drawing.Point(-4, 3);
+            this.ctrlProductDetailsWithFilter1.Name = "ctrlProductDetailsWithFilter1";
+            this.ctrlProductDetailsWithFilter1.Size = new System.Drawing.Size(589, 384);
+            this.ctrlProductDetailsWithFilter1.TabIndex = 22;
+            // 
             // btnNextToCustomersInfo
             // 
             this.btnNextToCustomersInfo.Location = new System.Drawing.Point(608, 310);
@@ -97,6 +105,36 @@
             this.btnNextToCustomersInfo.Text = "Next";
             this.btnNextToCustomersInfo.UseVisualStyleBackColor = true;
             this.btnNextToCustomersInfo.Click += new System.EventHandler(this.btnNextToCustomersInfo_Click);
+            // 
+            // tpCustomerInfo
+            // 
+            this.tpCustomerInfo.Controls.Add(this.ctrlShowCustomerDetailsWithFilter1);
+            this.tpCustomerInfo.Controls.Add(this.btnNextToReviewInfo);
+            this.tpCustomerInfo.Location = new System.Drawing.Point(4, 25);
+            this.tpCustomerInfo.Name = "tpCustomerInfo";
+            this.tpCustomerInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tpCustomerInfo.Size = new System.Drawing.Size(731, 427);
+            this.tpCustomerInfo.TabIndex = 2;
+            this.tpCustomerInfo.Text = "CustomerInfo";
+            this.tpCustomerInfo.UseVisualStyleBackColor = true;
+            // 
+            // ctrlShowCustomerDetailsWithFilter1
+            // 
+            this.ctrlShowCustomerDetailsWithFilter1.FilterEnabled = true;
+            this.ctrlShowCustomerDetailsWithFilter1.Location = new System.Drawing.Point(3, 3);
+            this.ctrlShowCustomerDetailsWithFilter1.Name = "ctrlShowCustomerDetailsWithFilter1";
+            this.ctrlShowCustomerDetailsWithFilter1.Size = new System.Drawing.Size(616, 413);
+            this.ctrlShowCustomerDetailsWithFilter1.TabIndex = 24;
+            // 
+            // btnNextToReviewInfo
+            // 
+            this.btnNextToReviewInfo.Location = new System.Drawing.Point(621, 326);
+            this.btnNextToReviewInfo.Name = "btnNextToReviewInfo";
+            this.btnNextToReviewInfo.Size = new System.Drawing.Size(104, 77);
+            this.btnNextToReviewInfo.TabIndex = 23;
+            this.btnNextToReviewInfo.Text = "Next";
+            this.btnNextToReviewInfo.UseVisualStyleBackColor = true;
+            this.btnNextToReviewInfo.Click += new System.EventHandler(this.btnNextToReviewInfo_Click);
             // 
             // tpReviewInfo
             // 
@@ -115,6 +153,13 @@
             this.tpReviewInfo.TabIndex = 1;
             this.tpReviewInfo.Text = "ReviewInfo";
             this.tpReviewInfo.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDownRating
+            // 
+            this.numericUpDownRating.Location = new System.Drawing.Point(250, 198);
+            this.numericUpDownRating.Name = "numericUpDownRating";
+            this.numericUpDownRating.Size = new System.Drawing.Size(200, 22);
+            this.numericUpDownRating.TabIndex = 18;
             // 
             // dateTimePickerReviewDate
             // 
@@ -206,51 +251,6 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // tpCustomerInfo
-            // 
-            this.tpCustomerInfo.Controls.Add(this.ctrlShowCustomerDetailsWithFilter1);
-            this.tpCustomerInfo.Controls.Add(this.btnNextToReviewInfo);
-            this.tpCustomerInfo.Location = new System.Drawing.Point(4, 25);
-            this.tpCustomerInfo.Name = "tpCustomerInfo";
-            this.tpCustomerInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCustomerInfo.Size = new System.Drawing.Size(731, 427);
-            this.tpCustomerInfo.TabIndex = 2;
-            this.tpCustomerInfo.Text = "CustomerInfo";
-            this.tpCustomerInfo.UseVisualStyleBackColor = true;
-            // 
-            // btnNextToReviewInfo
-            // 
-            this.btnNextToReviewInfo.Location = new System.Drawing.Point(621, 326);
-            this.btnNextToReviewInfo.Name = "btnNextToReviewInfo";
-            this.btnNextToReviewInfo.Size = new System.Drawing.Size(104, 77);
-            this.btnNextToReviewInfo.TabIndex = 23;
-            this.btnNextToReviewInfo.Text = "Next";
-            this.btnNextToReviewInfo.UseVisualStyleBackColor = true;
-            this.btnNextToReviewInfo.Click += new System.EventHandler(this.btnNextToReviewInfo_Click);
-            // 
-            // numericUpDownRating
-            // 
-            this.numericUpDownRating.Location = new System.Drawing.Point(250, 198);
-            this.numericUpDownRating.Name = "numericUpDownRating";
-            this.numericUpDownRating.Size = new System.Drawing.Size(200, 22);
-            this.numericUpDownRating.TabIndex = 18;
-            // 
-            // ctrlProductDetailsWithFilter1
-            // 
-            this.ctrlProductDetailsWithFilter1.FilterEnabled = true;
-            this.ctrlProductDetailsWithFilter1.Location = new System.Drawing.Point(-4, 3);
-            this.ctrlProductDetailsWithFilter1.Name = "ctrlProductDetailsWithFilter1";
-            this.ctrlProductDetailsWithFilter1.Size = new System.Drawing.Size(589, 384);
-            this.ctrlProductDetailsWithFilter1.TabIndex = 22;
-            // 
-            // ctrlShowCustomerDetailsWithFilter1
-            // 
-            this.ctrlShowCustomerDetailsWithFilter1.FilterEnabled = true;
-            this.ctrlShowCustomerDetailsWithFilter1.Location = new System.Drawing.Point(3, 3);
-            this.ctrlShowCustomerDetailsWithFilter1.Name = "ctrlShowCustomerDetailsWithFilter1";
-            this.ctrlShowCustomerDetailsWithFilter1.Size = new System.Drawing.Size(616, 413);
-            this.ctrlShowCustomerDetailsWithFilter1.TabIndex = 24;
-            // 
             // frmAddEditReview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -265,9 +265,9 @@
             this.Load += new System.EventHandler(this.frmAddEditReview_Load);
             this.tbReviewInfo.ResumeLayout(false);
             this.tpProductInfo.ResumeLayout(false);
+            this.tpCustomerInfo.ResumeLayout(false);
             this.tpReviewInfo.ResumeLayout(false);
             this.tpReviewInfo.PerformLayout();
-            this.tpCustomerInfo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRating)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
