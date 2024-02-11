@@ -99,7 +99,6 @@
             // 
             this.ctrlCategoryDetails1.Location = new System.Drawing.Point(13, 85);
             this.ctrlCategoryDetails1.Name = "ctrlCategoryDetails1";
-            this.ctrlCategoryDetails1.SelectedCategoryInfo = null;
             this.ctrlCategoryDetails1.Size = new System.Drawing.Size(295, 128);
             this.ctrlCategoryDetails1.TabIndex = 16;
             // 

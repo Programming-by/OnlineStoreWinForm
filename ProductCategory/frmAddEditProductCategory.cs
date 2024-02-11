@@ -78,7 +78,6 @@ namespace OnlineStoreWinform.ProductCategory
 
             lblCategoryID.Text = _ProductCategory.CategoryID.ToString();
             txtCategoryName.Text = _ProductCategory.CategoryName;
-
             }
         private void frmAddEditProductCategory_Load(object sender, EventArgs e)
         {

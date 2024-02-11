@@ -1,5 +1,6 @@
 ﻿using OnlineStoreBusinessLayer;
 using OnlineStoreWinform.Customers.Controls;
+using OnlineStoreWinform.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +24,7 @@ namespace OnlineStoreWinform.ProductImages
             InitializeComponent();
             Mode = enMode.AddNew;
         }
-       
+
         public frmAddEditProductImages(int ID)
         {
             InitializeComponent();
@@ -51,17 +52,6 @@ namespace OnlineStoreWinform.ProductImages
             this.Close();
         }
 
-
-        private void txtProductName_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtImageURL.Text))
-            {
-                e.Cancel = true;
-                errorProvider1.SetError(txtImageURL,"this field is required");
-            } else
-                errorProvider1.SetError(txtImageURL, "");
-        }
-
         private void _ResetDefaultValues()
         {
             if (Mode == enMode.AddNew)
@@ -69,30 +59,32 @@ namespace OnlineStoreWinform.ProductImages
                 lblTitle.Text = "Add New Product Images";
                 this.Text = lblTitle.Text;
                 _ProductImages = new clsProductImages();
-            } else
+            }
+            else
             {
                 lblTitle.Text = "Update Product Images";
                 this.Text = lblTitle.Text;
             }
-            btnSave.Enabled =false;
+            btnSave.Enabled = false;
             tpProductImages.Enabled = false;
             numericUpDown1.Minimum = 1;
+            pbImageURL.Image = Resources.Male_512;
         }
 
         private void _LoadData()
         {
             _ProductImages = clsProductImages.Find(_ID);
 
-            if ( _ProductImages == null )
+            if (_ProductImages == null)
             {
                 MessageBox.Show("ProductName Images is not found");
                 return;
             }
-         ctrlProductDetailsWithFilter1.LoadProductInfo(_ProductImages.ProductID);
-         ctrlProductDetailsWithFilter1.FilterEnabled = false;
-         lblID.Text = _ProductImages.ID.ToString();
-         txtImageURL.Text = _ProductImages.ImageURL;
-         numericUpDown1.Value = _ProductImages.ImageOrder;
+            ctrlProductDetailsWithFilter1.LoadProductInfo(_ProductImages.ProductID);
+            ctrlProductDetailsWithFilter1.FilterEnabled = false;
+            lblID.Text = _ProductImages.ID.ToString();
+            pbImageURL.Load(_ProductImages.ImageURL);
+            numericUpDown1.Value = _ProductImages.ImageOrder;
         }
         private void frmAddEditProductImages_Load(object sender, EventArgs e)
         {
@@ -102,9 +94,9 @@ namespace OnlineStoreWinform.ProductImages
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            _ProductImages.ImageURL = txtImageURL.Text;
+            _ProductImages.ImageURL = pbImageURL.ImageLocation;
             _ProductImages.ImageOrder = (Int16)numericUpDown1.Value;
-             _ProductImages.ProductID = ctrlProductDetailsWithFilter1.ProductID;
+            _ProductImages.ProductID = ctrlProductDetailsWithFilter1.ProductID;
             if (_ProductImages.Save())
             {
                 Mode = enMode.Update;
@@ -112,7 +104,25 @@ namespace OnlineStoreWinform.ProductImages
                 MessageBox.Show("Data Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
-                MessageBox.Show("Data Failed to Save", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);       
+                MessageBox.Show("Data Failed to Save", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        private void llSetImage_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            openFileDialog1.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string selectedFilePath = openFileDialog1.FileName;
+                pbImageURL.Load(selectedFilePath);
+            }
+        }
+
+        private void llRemoveImage_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            pbImageURL.ImageLocation = null;
         }
     }
 }
+

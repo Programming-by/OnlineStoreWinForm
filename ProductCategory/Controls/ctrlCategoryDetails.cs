@@ -22,22 +22,24 @@ namespace OnlineStoreWinform.ProductCategory.Controls
 
         public clsProductCategory SelectedCategoryInfo
         {
-            get
-            {
-                return _Category;
-            }
-
-            set
-            {
-                _Category = value;
-            }
+            get { return _Category; }
         }
+
+        private int? _CategoryID = -1;
+
+        public int? CategoryID
+        {
+            get { return _CategoryID; }
+        }
+
+
         public void LoadCategoryInfo(int? CategoryID)
         {
             _Category = clsProductCategory.Find(CategoryID);
 
             if (_Category != null)
             {
+                _CategoryID = _Category.CategoryID;
                 lblCategoryID.Text = _Category.CategoryID.ToString();
                 lblCategoryName.Text = _Category.CategoryName;
             }

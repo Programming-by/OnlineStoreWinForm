@@ -33,11 +33,9 @@
             this.tpCategoryInfo = new System.Windows.Forms.TabPage();
             this.btnNext = new System.Windows.Forms.Button();
             this.tpProductCatalog = new System.Windows.Forms.TabPage();
-            this.txtImageURL = new System.Windows.Forms.TextBox();
             this.txtQuantityInStock = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtProductName = new System.Windows.Forms.TextBox();
             this.lblProductID = new System.Windows.Forms.Label();
@@ -49,11 +47,16 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pbImageURL = new System.Windows.Forms.PictureBox();
+            this.llSetImage = new System.Windows.Forms.LinkLabel();
+            this.llRemoveImage = new System.Windows.Forms.LinkLabel();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.ctrlCategoryDetailsWithFilter1 = new OnlineStoreWinform.ProductCategory.ctrlCategoryDetailsWithFilter();
             this.tbProductCatalog.SuspendLayout();
             this.tpCategoryInfo.SuspendLayout();
             this.tpProductCatalog.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImageURL)).BeginInit();
             this.SuspendLayout();
             // 
             // tbProductCatalog
@@ -90,11 +93,12 @@
             // 
             // tpProductCatalog
             // 
-            this.tpProductCatalog.Controls.Add(this.txtImageURL);
+            this.tpProductCatalog.Controls.Add(this.llRemoveImage);
+            this.tpProductCatalog.Controls.Add(this.llSetImage);
+            this.tpProductCatalog.Controls.Add(this.pbImageURL);
             this.tpProductCatalog.Controls.Add(this.txtQuantityInStock);
             this.tpProductCatalog.Controls.Add(this.txtPrice);
             this.tpProductCatalog.Controls.Add(this.txtDescription);
-            this.tpProductCatalog.Controls.Add(this.label7);
             this.tpProductCatalog.Controls.Add(this.label6);
             this.tpProductCatalog.Controls.Add(this.txtProductName);
             this.tpProductCatalog.Controls.Add(this.lblProductID);
@@ -109,13 +113,7 @@
             this.tpProductCatalog.TabIndex = 1;
             this.tpProductCatalog.Text = "ProductInfo";
             this.tpProductCatalog.UseVisualStyleBackColor = true;
-            // 
-            // txtImageURL
-            // 
-            this.txtImageURL.Location = new System.Drawing.Point(250, 314);
-            this.txtImageURL.Name = "txtImageURL";
-            this.txtImageURL.Size = new System.Drawing.Size(200, 22);
-            this.txtImageURL.TabIndex = 23;
+            this.tpProductCatalog.Click += new System.EventHandler(this.tpProductCatalog_Click);
             // 
             // txtQuantityInStock
             // 
@@ -142,17 +140,6 @@
             this.txtDescription.Size = new System.Drawing.Size(200, 22);
             this.txtDescription.TabIndex = 20;
             this.txtDescription.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateTextBox);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Navy;
-            this.label7.Location = new System.Drawing.Point(82, 316);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 20);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "ImageURL:";
             // 
             // label6
             // 
@@ -264,9 +251,44 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // pbImageURL
+            // 
+            this.pbImageURL.Image = global::OnlineStoreWinform.Properties.Resources.Male_512;
+            this.pbImageURL.Location = new System.Drawing.Point(544, 50);
+            this.pbImageURL.Name = "pbImageURL";
+            this.pbImageURL.Size = new System.Drawing.Size(152, 142);
+            this.pbImageURL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImageURL.TabIndex = 24;
+            this.pbImageURL.TabStop = false;
+            // 
+            // llSetImage
+            // 
+            this.llSetImage.AutoSize = true;
+            this.llSetImage.Location = new System.Drawing.Point(541, 233);
+            this.llSetImage.Name = "llSetImage";
+            this.llSetImage.Size = new System.Drawing.Size(65, 16);
+            this.llSetImage.TabIndex = 25;
+            this.llSetImage.TabStop = true;
+            this.llSetImage.Text = "SetImage";
+            this.llSetImage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llSetImage_LinkClicked);
+            // 
+            // llRemoveImage
+            // 
+            this.llRemoveImage.AutoSize = true;
+            this.llRemoveImage.Location = new System.Drawing.Point(637, 233);
+            this.llRemoveImage.Name = "llRemoveImage";
+            this.llRemoveImage.Size = new System.Drawing.Size(59, 16);
+            this.llRemoveImage.TabIndex = 26;
+            this.llRemoveImage.TabStop = true;
+            this.llRemoveImage.Text = "Remove";
+            this.llRemoveImage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llRemoveImage_LinkClicked);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // ctrlCategoryDetailsWithFilter1
             // 
-            this.ctrlCategoryDetailsWithFilter1.CategoryID = -1;
             this.ctrlCategoryDetailsWithFilter1.FilterEnabled = true;
             this.ctrlCategoryDetailsWithFilter1.Location = new System.Drawing.Point(40, 87);
             this.ctrlCategoryDetailsWithFilter1.Name = "ctrlCategoryDetailsWithFilter1";
@@ -290,6 +312,7 @@
             this.tpProductCatalog.ResumeLayout(false);
             this.tpProductCatalog.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImageURL)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,13 +333,15 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TextBox txtDescription;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtImageURL;
         private System.Windows.Forms.TextBox txtQuantityInStock;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private ProductCategory.ctrlCategoryDetailsWithFilter ctrlCategoryDetailsWithFilter1;
+        private System.Windows.Forms.PictureBox pbImageURL;
+        private System.Windows.Forms.LinkLabel llRemoveImage;
+        private System.Windows.Forms.LinkLabel llSetImage;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

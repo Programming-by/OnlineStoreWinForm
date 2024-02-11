@@ -1,5 +1,6 @@
 ﻿using OnlineStoreBusinessLayer;
 using OnlineStoreWinform.Orders.Controls;
+using OnlineStoreWinform.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,17 +45,18 @@ namespace OnlineStoreWinform.ProductCatalog
         {
             if (Mode == enMode.AddNew)
             {
-                lblTitle.Text = "Add New Payment";
+                lblTitle.Text = "Add New Product";
                 this.Text = lblTitle.Text;
                 _Product = new clsProductCatalog();
             }
             else
             {
-                lblTitle.Text = "Update Payment";
+                lblTitle.Text = "Update Product";
                 this.Text = lblTitle.Text;
             }
             btnSave.Enabled = false;
             tpProductCatalog.Enabled = false;
+            pbImageURL.Image = Resources.Male_512;
         }
 
         private void _LoadData()
@@ -75,7 +77,7 @@ namespace OnlineStoreWinform.ProductCatalog
             txtDescription.Text = _Product.Description;
             txtPrice.Text = _Product.Price.ToString();
             txtQuantityInStock.Text = _Product.QuantityInStock.ToString();
-            txtImageURL.Text = _Product.ImageURL;
+            pbImageURL.Load(_Product.ImageURL);
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -124,7 +126,8 @@ namespace OnlineStoreWinform.ProductCatalog
             _Product.Description = txtDescription.Text;
             _Product.Price = decimal.Parse(txtPrice.Text);
             _Product.QuantityInStock = int.Parse(txtQuantityInStock.Text);
-            _Product.ImageURL = txtImageURL.Text;
+            if (pbImageURL.Image != null)
+            _Product.ImageURL = pbImageURL.ImageLocation;
             _Product.CategoryID = ctrlCategoryDetailsWithFilter1.CategoryID;
 
             if (_Product.Save())
@@ -136,6 +139,30 @@ namespace OnlineStoreWinform.ProductCatalog
             }
             else
                 MessageBox.Show("Data Failed to Save", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void llSetImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            openFileDialog1.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string selectedFilePath = openFileDialog1.FileName;
+                pbImageURL.Load(selectedFilePath);
+            }
+        }
+
+        private void llRemoveImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            pbImageURL.ImageLocation = null;
+
+        }
+
+        private void tpProductCatalog_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -30,14 +30,9 @@ namespace OnlineStoreWinform.ProductCategory
             }
         }
 
-        private int? _CategoryID = -1;
         public int? CategoryID
         {
-            get { return _CategoryID; }
-            set
-            {
-                _CategoryID = value;
-            }
+            get { return ctrlCategoryDetails1.CategoryID; }
         }
 
         public clsProductCategory SelectedCategoryInfo
