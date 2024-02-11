@@ -21,9 +21,11 @@ namespace OnlineStoreWinform
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        Form _frmLogin;
+        public frmMain(Form frmLogin)
         {
             InitializeComponent();
+            _frmLogin = frmLogin;
         }
 
         private void customersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -87,6 +89,12 @@ namespace OnlineStoreWinform
             frmListOrderItems frm = new frmListOrderItems();
 
             frm.ShowDialog();
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _frmLogin.Show();
+            this.Close();
         }
     }
 }
