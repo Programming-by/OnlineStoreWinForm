@@ -83,8 +83,11 @@ namespace OnlineStoreWinform.ProductImages
             ctrlProductDetailsWithFilter1.LoadProductInfo(_ProductImages.ProductID);
             ctrlProductDetailsWithFilter1.FilterEnabled = false;
             lblID.Text = _ProductImages.ID.ToString();
+            if (_ProductImages.ImageURL != "") 
             pbImageURL.Load(_ProductImages.ImageURL);
             numericUpDown1.Value = _ProductImages.ImageOrder;
+
+            llRemoveImage.Enabled = (_ProductImages.ImageURL != "");
         }
         private void frmAddEditProductImages_Load(object sender, EventArgs e)
         {

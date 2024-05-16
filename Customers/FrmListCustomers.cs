@@ -18,10 +18,13 @@ namespace OnlineStoreWinform.Customers
         {
             InitializeComponent();
         }
+
         private DataTable _dtCustomers = clsCustomer.GetAllCustomer();
         private void FrmListCustomers_Load(object sender, EventArgs e)
-        {
-            _dtCustomers = clsCustomer.GetAllCustomer();
+        { 
+             cbPages.SelectedIndex = 0;
+             int PageNumber = cbPages.SelectedIndex + 1;
+            _dtCustomers = clsCustomer.GetAllCustomer(PageNumber);
             dgvCustomers.DataSource = _dtCustomers;
             lblCustomersCount.Text = _dtCustomers.Rows.Count.ToString();
 
@@ -106,6 +109,17 @@ namespace OnlineStoreWinform.Customers
             frmShowCustomerDetails frm = new frmShowCustomerDetails(((int)dgvCustomers.CurrentRow.Cells[0].Value));
 
             frm.ShowDialog();
+        }
+
+        private void GetCustomersByPage()
+        {
+            _dtCustomers = clsCustomer.GetAllCustomer(cbPages.SelectedIndex + 1);
+            dgvCustomers.DataSource = _dtCustomers;
+            lblCustomersCount.Text = _dtCustomers.Rows.Count.ToString();
+        }
+        private void cbPages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+                    GetCustomersByPage();
         }
     }
 }
