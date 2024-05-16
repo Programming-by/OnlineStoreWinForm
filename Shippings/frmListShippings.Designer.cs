@@ -38,6 +38,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblShippingCount = new System.Windows.Forms.Label();
             this.btnAddNewShipping = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbPages = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShipping)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -64,26 +66,26 @@
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 104);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(204, 76);
             // 
             // addNewShippingToolStripMenuItem
             // 
             this.addNewShippingToolStripMenuItem.Name = "addNewShippingToolStripMenuItem";
-            this.addNewShippingToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
+            this.addNewShippingToolStripMenuItem.Size = new System.Drawing.Size(203, 24);
             this.addNewShippingToolStripMenuItem.Text = "Add New Shipping";
             this.addNewShippingToolStripMenuItem.Click += new System.EventHandler(this.addNewShippingToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(203, 24);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(203, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -130,11 +132,37 @@
             this.btnAddNewShipping.UseVisualStyleBackColor = true;
             this.btnAddNewShipping.Click += new System.EventHandler(this.btnAddNewShipping_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Navy;
+            this.label3.Location = new System.Drawing.Point(12, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 25);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Page:";
+            // 
+            // cbPages
+            // 
+            this.cbPages.FormattingEnabled = true;
+            this.cbPages.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.cbPages.Location = new System.Drawing.Point(102, 86);
+            this.cbPages.Name = "cbPages";
+            this.cbPages.Size = new System.Drawing.Size(121, 24);
+            this.cbPages.TabIndex = 16;
+            this.cbPages.SelectedIndexChanged += new System.EventHandler(this.cbPages_SelectedIndexChanged);
+            // 
             // frmListShippings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 509);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cbPages);
             this.Controls.Add(this.dgvShipping);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -161,5 +189,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblShippingCount;
         private System.Windows.Forms.Button btnAddNewShipping;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbPages;
     }
 }

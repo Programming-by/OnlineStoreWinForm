@@ -21,7 +21,8 @@ namespace OnlineStoreWinform.Shippings
 
         private void frmListShippings_Load(object sender, EventArgs e)
         {
-            _dtShipping = clsShipping.GetAllShipping();
+            cbPages.SelectedIndex = 0;
+            _dtShipping = clsShipping.GetAllShipping(cbPages.SelectedIndex + 1);
             dgvShipping.DataSource = _dtShipping;
             lblShippingCount.Text = _dtShipping.Rows.Count.ToString();
 
@@ -89,5 +90,16 @@ namespace OnlineStoreWinform.Shippings
                 MessageBox.Show("Shipping Failed to Delete");
         }
 
+        private void GetShippingsByPage()
+        {
+            _dtShipping = clsShipping.GetAllShipping(cbPages.SelectedIndex + 1);
+            dgvShipping.DataSource = _dtShipping;
+            lblShippingCount.Text = _dtShipping.Rows.Count.ToString();
+        }
+
+        private void cbPages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GetShippingsByPage();
+        }
     }
 }
