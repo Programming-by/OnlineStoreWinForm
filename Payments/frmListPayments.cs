@@ -18,14 +18,16 @@ namespace OnlineStoreWinform.Payments
             InitializeComponent();
         }
 
-        private DataTable dtPayments = clsPayment.GetAllPayments();
+        private DataTable _dtPayments = clsPayment.GetAllPayments();
         private void frmListPayments_Load(object sender, EventArgs e)
         {
-            dtPayments = clsPayment.GetAllPayments();
-            dgvPayments.DataSource = dtPayments;
-            lblPaymentCount.Text = dtPayments.Rows.Count.ToString();
+            cbPages.SelectedIndex = 0;
+            int PageNumber = cbPages.SelectedIndex + 1;
+            _dtPayments = clsPayment.GetAllPayments(PageNumber);
+            dgvPayments.DataSource = _dtPayments;
+            lblPaymentCount.Text = _dtPayments.Rows.Count.ToString();
 
-            if (dtPayments.Rows.Count > 0)
+            if (_dtPayments.Rows.Count > 0)
             {
                 dgvPayments.Columns[0].HeaderText = "PaymentID";
                 dgvPayments.Columns[0].Width = 80;
@@ -86,10 +88,23 @@ namespace OnlineStoreWinform.Payments
             frmListPayments_Load(null, null);
         }
 
+
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        private void GetPaymentsByPage()
+        {
+            _dtPayments = clsPayment.GetAllPayments(cbPages.SelectedIndex + 1);
+            dgvPayments.DataSource = _dtPayments;
+            lblPaymentCount.Text = _dtPayments.Rows.Count.ToString();
+        }
+
+        private void cbPages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GetPaymentsByPage();
+        }
     }
 }
