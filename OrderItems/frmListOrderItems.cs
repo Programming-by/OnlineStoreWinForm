@@ -20,9 +20,10 @@ namespace OnlineStoreWinform.OrderItems
         private DataTable _dtOrderItems = clsOrderItem.GetAllOrderItems(); 
         private void frmListOrderItems_Load(object sender, EventArgs e)
         {
+            cbPages.SelectedIndex = 0;
             _dtOrderItems = clsOrderItem.GetAllOrderItems();
             dgvOrderItems.DataSource = _dtOrderItems;
-            lblReviewsCount.Text = _dtOrderItems.Rows.Count.ToString();
+            lblOrderItemsCount.Text = _dtOrderItems.Rows.Count.ToString();
 
             if (_dtOrderItems.Rows.Count > 0)
             {
@@ -104,5 +105,16 @@ namespace OnlineStoreWinform.OrderItems
                 MessageBox.Show("Order Item Failed to Delete");
         }
 
+        private void GetOrderItemsByPage()
+        {
+            _dtOrderItems = clsOrderItem.GetAllOrderItems(cbPages.SelectedIndex + 1);
+            dgvOrderItems.DataSource = _dtOrderItems;
+            lblOrderItemsCount.Text = _dtOrderItems.Rows.Count.ToString();
+        }
+
+        private void cbPages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GetOrderItemsByPage();
+        }
     }
 }

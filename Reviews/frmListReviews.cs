@@ -26,6 +26,8 @@ namespace OnlineStoreWinform.Reviews
         private DataTable _dtReviews = clsReview.GetAllReviews();
         private void frmListReviews_Load(object sender, EventArgs e)
         {
+
+            cbPages.SelectedIndex = 0;
             _dtReviews = clsReview.GetAllReviews();
             dgvReviews.DataSource = _dtReviews;
             lblReviewsCount.Text = _dtReviews.Rows.Count.ToString();
@@ -92,6 +94,18 @@ namespace OnlineStoreWinform.Reviews
             frm.ShowDialog();
 
             frmListReviews_Load(null, null);
+        }
+
+        private void GetReviewsByPage()
+        {
+            _dtReviews = clsReview.GetAllReviews(cbPages.SelectedIndex + 1);
+            dgvReviews.DataSource = _dtReviews;
+            lblReviewsCount.Text = _dtReviews.Rows.Count.ToString();
+        }
+
+        private void cbPages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GetReviewsByPage();
         }
     }
 }

@@ -21,9 +21,10 @@ namespace OnlineStoreWinform.ProductCategory
         private DataTable _dtProductCategory = clsProductCategory.GetAllProductCategory();
         private void frmListProductCategory_Load(object sender, EventArgs e)
         {
+            cbPages.SelectedIndex = 0;
             _dtProductCategory = clsProductCategory.GetAllProductCategory();
             dgvProductCategory.DataSource = _dtProductCategory;
-            lblCustomersCount.Text = _dtProductCategory.Rows.Count.ToString();
+            lblProductCategoryCount.Text = _dtProductCategory.Rows.Count.ToString();
 
             if (_dtProductCategory.Rows.Count > 0)
             {
@@ -76,6 +77,19 @@ namespace OnlineStoreWinform.ProductCategory
             {
                 MessageBox.Show("Failed to Delete");
             }
+        }
+
+        private void GetProductCategoryByPage()
+        {
+            _dtProductCategory = clsProductCategory.GetAllProductCategory(cbPages.SelectedIndex + 1);
+            dgvProductCategory.DataSource = _dtProductCategory;
+            lblProductCategoryCount.Text = _dtProductCategory.Rows.Count.ToString();
+        }
+
+
+        private void cbPages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GetProductCategoryByPage();
         }
     }
 }

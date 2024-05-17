@@ -25,6 +25,7 @@ namespace OnlineStoreWinform.ProductImages
         private DataTable _dtProductImages = clsProductImages.GetAllProductImages();
         private void frmListProductImages_Load(object sender, EventArgs e)
         {
+            cbPages.SelectedIndex = 0;
             _dtProductImages = clsProductImages.GetAllProductImages();
             dgvProductImages.DataSource = _dtProductImages;
             lblProductImagesCount.Text = _dtProductImages.Rows.Count.ToString();
@@ -84,6 +85,17 @@ namespace OnlineStoreWinform.ProductImages
             }
             else
                 MessageBox.Show("Product Images Failed to Delete");
+        }
+        private void GetProductImagesByPage()
+        {
+            _dtProductImages = clsProductImages.GetAllProductImages(cbPages.SelectedIndex + 1);
+            dgvProductImages.DataSource = _dtProductImages;
+            lblProductImagesCount.Text = _dtProductImages.Rows.Count.ToString();
+        }
+
+        private void cbPages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GetProductImagesByPage();
         }
     }
 }

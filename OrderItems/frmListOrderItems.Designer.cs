@@ -37,8 +37,10 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblReviewsCount = new System.Windows.Forms.Label();
+            this.lblOrderItemsCount = new System.Windows.Forms.Label();
             this.btnAddNewOrderItem = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbPages = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderItems)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -120,16 +122,16 @@
             this.label2.TabIndex = 22;
             this.label2.Text = "Reviews Count";
             // 
-            // lblReviewsCount
+            // lblOrderItemsCount
             // 
-            this.lblReviewsCount.AutoSize = true;
-            this.lblReviewsCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReviewsCount.ForeColor = System.Drawing.Color.Navy;
-            this.lblReviewsCount.Location = new System.Drawing.Point(193, 368);
-            this.lblReviewsCount.Name = "lblReviewsCount";
-            this.lblReviewsCount.Size = new System.Drawing.Size(45, 25);
-            this.lblReviewsCount.TabIndex = 21;
-            this.lblReviewsCount.Text = "???";
+            this.lblOrderItemsCount.AutoSize = true;
+            this.lblOrderItemsCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrderItemsCount.ForeColor = System.Drawing.Color.Navy;
+            this.lblOrderItemsCount.Location = new System.Drawing.Point(193, 368);
+            this.lblOrderItemsCount.Name = "lblOrderItemsCount";
+            this.lblOrderItemsCount.Size = new System.Drawing.Size(45, 25);
+            this.lblOrderItemsCount.TabIndex = 21;
+            this.lblOrderItemsCount.Text = "???";
             // 
             // btnAddNewOrderItem
             // 
@@ -141,16 +143,42 @@
             this.btnAddNewOrderItem.UseVisualStyleBackColor = true;
             this.btnAddNewOrderItem.Click += new System.EventHandler(this.btnAddNewOrderItem_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Navy;
+            this.label3.Location = new System.Drawing.Point(3, 64);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 25);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Page:";
+            // 
+            // cbPages
+            // 
+            this.cbPages.FormattingEnabled = true;
+            this.cbPages.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.cbPages.Location = new System.Drawing.Point(93, 64);
+            this.cbPages.Name = "cbPages";
+            this.cbPages.Size = new System.Drawing.Size(121, 24);
+            this.cbPages.TabIndex = 24;
+            this.cbPages.SelectedIndexChanged += new System.EventHandler(this.cbPages_SelectedIndexChanged);
+            // 
             // frmListOrderItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(727, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cbPages);
             this.Controls.Add(this.dgvOrderItems);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblReviewsCount);
+            this.Controls.Add(this.lblOrderItemsCount);
             this.Controls.Add(this.btnAddNewOrderItem);
             this.Name = "frmListOrderItems";
             this.Text = "frmListOrderItems";
@@ -172,7 +200,9 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblReviewsCount;
+        private System.Windows.Forms.Label lblOrderItemsCount;
         private System.Windows.Forms.Button btnAddNewOrderItem;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbPages;
     }
 }

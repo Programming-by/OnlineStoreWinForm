@@ -39,6 +39,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblProductCatalogCount = new System.Windows.Forms.Label();
             this.btnAddNewProductCatalog = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbPages = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductCatalog)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -141,11 +143,37 @@
             this.btnAddNewProductCatalog.UseVisualStyleBackColor = true;
             this.btnAddNewProductCatalog.Click += new System.EventHandler(this.btnAddNewProductCatalog_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Navy;
+            this.label3.Location = new System.Drawing.Point(13, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 25);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Page:";
+            // 
+            // cbPages
+            // 
+            this.cbPages.FormattingEnabled = true;
+            this.cbPages.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.cbPages.Location = new System.Drawing.Point(103, 68);
+            this.cbPages.Name = "cbPages";
+            this.cbPages.Size = new System.Drawing.Size(121, 24);
+            this.cbPages.TabIndex = 18;
+            this.cbPages.SelectedIndexChanged += new System.EventHandler(this.cbPages_SelectedIndexChanged);
+            // 
             // frmListProductCatlog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cbPages);
             this.Controls.Add(this.dgvProductCatalog);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);
@@ -174,5 +202,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblProductCatalogCount;
         private System.Windows.Forms.Button btnAddNewProductCatalog;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbPages;
     }
 }

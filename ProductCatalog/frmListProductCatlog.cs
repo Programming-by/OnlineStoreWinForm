@@ -26,6 +26,7 @@ namespace OnlineStoreWinform.ProductCatalog
         private DataTable _dtProductCatalog = clsProductCatalog.GetAllProductCatalogs();
         private void frmListProductCatlog_Load(object sender, EventArgs e)
         {
+            cbPages.SelectedIndex = 0;
             _dtProductCatalog = clsProductCatalog.GetAllProductCatalogs();
             dgvProductCatalog.DataSource = _dtProductCatalog;
             lblProductCatalogCount.Text = _dtProductCatalog.Rows.Count.ToString();
@@ -98,6 +99,18 @@ namespace OnlineStoreWinform.ProductCatalog
             frm.ShowDialog();
 
             frmListProductCatlog_Load(null, null);
+        }
+
+        private void GetProductCatalogeByPage()
+        {
+            _dtProductCatalog = clsProductCatalog.GetAllProductCatalogs(cbPages.SelectedIndex + 1);
+            dgvProductCatalog.DataSource = _dtProductCatalog;
+            lblProductCatalogCount.Text = _dtProductCatalog.Rows.Count.ToString();
+        }
+
+        private void cbPages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GetProductCatalogeByPage();
         }
     }
 }

@@ -20,6 +20,7 @@ namespace OnlineStoreWinform.Orders
         private DataTable _dtOrders = clsOrder.GetAllOrders();
         private void frmListOrders_Load(object sender, EventArgs e)
         {
+            cbPages.SelectedIndex = 0;
             _dtOrders = clsOrder.GetAllOrders();
             dgvOrders.DataSource = _dtOrders;
             lblOrdersCount.Text = _dtOrders.Rows.Count.ToString();
@@ -90,6 +91,18 @@ namespace OnlineStoreWinform.Orders
             frmShowOrderDetails frm = new frmShowOrderDetails(OrderID);
 
             frm.ShowDialog();
+        }
+
+        private void GetOrdersByPage()
+        {
+            _dtOrders = clsOrder.GetAllOrders(cbPages.SelectedIndex + 1);
+            dgvOrders.DataSource = _dtOrders;
+            lblOrdersCount.Text = _dtOrders.Rows.Count.ToString();
+        }
+
+        private void cbPages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GetOrdersByPage();
         }
     }
 }
